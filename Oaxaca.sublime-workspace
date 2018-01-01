@@ -1,0 +1,357 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"wi",
+				"width"
+			],
+			[
+				"lin",
+				"linethrough"
+			],
+			[
+				"Collection",
+				"Collection"
+			],
+			[
+				"backgr",
+				"background-image"
+			],
+			[
+				"obj",
+				"object-fit"
+			],
+			[
+				"co",
+				"cover"
+			],
+			[
+				"backg",
+				"background-attachment"
+			],
+			[
+				"bacg",
+				"background-color"
+			],
+			[
+				"border-top",
+				"border-top-width"
+			],
+			[
+				"t",
+				"thin"
+			],
+			[
+				"back",
+				"background-color"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "composer.json",
+			"settings":
+			{
+				"buffer_size": 337,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Applications/MAMP/htdocs/WPDev1/wp-content/themes/Oaxaca"
+	],
+	"file_history":
+	[
+		"/Applications/MAMP/htdocs/WPDev1/wp-content/themes/understrap/functions.php",
+		"/Users/annamcphee/Desktop/Website of Anna/style.css",
+		"/Users/annamcphee/Desktop/Website of Anna/index.html",
+		"/Applications/MAMP/htdocs/WPDev1/wp-content/themes/travel-gram/functions.php",
+		"/Applications/MAMP/htdocs/WPDev1/wp-content/themes/travel-gram/header-homepage.php",
+		"/Applications/MAMP/htdocs/WPDev1/wp-content/themes/travel-gram/header.php",
+		"/Applications/MAMP/htdocs/WPDev1/wp-content/themes/travel-gram/template-parts/content-page.php",
+		"/Applications/MAMP/htdocs/WPDev1/wp-content/themes/travel-gram/header-page.php",
+		"/Applications/MAMP/htdocs/WPDev1/wp-content/themes/travel-gram/header-archive.php",
+		"/Applications/MAMP/htdocs/WPDev1/wp-content/themes/travel-gram/Page_destinations.php",
+		"/Applications/MAMP/htdocs/WPDev1/wp-content/themes/travel-gram/page_taxonomy-index.php",
+		"/Applications/MAMP/htdocs/WPDev1/wp-content/themes/travel-gram/archive.php",
+		"/Applications/MAMP/htdocs/WPDev1/wp-content/themes/travel-gram/page.php",
+		"/Applications/MAMP/htdocs/WPDev1/wp-content/themes/travel-gram/page_homepage.php",
+		"/Applications/MAMP/htdocs/WPDev1/wp-content/themes/travel-gram/template-parts/content-destination.php",
+		"/Applications/MAMP/htdocs/WPDev1/wp-content/themes/travel-gram/taxonomy-collection.php",
+		"/Applications/MAMP/htdocs/WPDev1/wp-content/themes/travel-gram/taxonomy-destination.php",
+		"/Applications/MAMP/htdocs/WPDev1/wp-content/themes/travel-gram/sidebar-right-bar-home.php",
+		"/Applications/MAMP/htdocs/WPDev1/wp-content/themes/travel-gram/template-parts/content.php",
+		"/Applications/MAMP/htdocs/WPDev1/wp-content/themes/travel-gram/single.php",
+		"/Applications/MAMP/htdocs/WPDev1/wp-content/themes/travel-gram/content-collection.php",
+		"/Applications/MAMP/htdocs/WPDev1/wp-content/themes/travel-gram/index.php",
+		"/Applications/MAMP/htdocs/WPDev1/wp-content/themes/travel-gram/comments.php",
+		"/Applications/MAMP/htdocs/WPDev1/wp-content/themes/travel-gram/css/bootstrap.min.css.map",
+		"/Applications/MAMP/htdocs/WPDev1/wp-content/themes/travel-gram/content-destination.php",
+		"/Applications/MAMP/htdocs/WPDev1/wp-content/themes/travel-gram/footer.php",
+		"/Applications/MAMP/htdocs/WPDev1/wp-content/plugins/recent-posts-by-category-widget/recent-posts-by-category-widget.php",
+		"/Applications/MAMP/htdocs/WPDev1/wp-content/themes/travel-gram/template-parts/content-home.php",
+		"/Applications/MAMP/htdocs/WPDev1/wp-content/themes/travel-gram/sidebar-left-bar-home.php",
+		"/Applications/MAMP/htdocs/WPDev1/wp-content/themes/travel-gram/style.css",
+		"/Applications/MAMP/htdocs/WPDev1/wp-content/themes/travel-gram/inc/custom-header.php",
+		"/Applications/MAMP/htdocs/WPDev1/wp-content/themes/travel-gram/header2.php",
+		"/Applications/MAMP/htdocs/ Bootstrap Modeling/3-col-news/index.php",
+		"/Applications/MAMP/htdocs/ Bootstrap Modeling/3-col-news/footer.php",
+		"/Applications/MAMP/htdocs/ Bootstrap Modeling/3-col-news/left-sidebar.php",
+		"/Applications/MAMP/htdocs/ Bootstrap Modeling/3-col-news/post.php",
+		"/Applications/MAMP/htdocs/ Bootstrap Modeling/3-col-news/post-footer.php",
+		"/Applications/MAMP/htdocs/ Bootstrap Modeling/3-col-news/css/style.css",
+		"/Applications/MAMP/htdocs/ Bootstrap Modeling/3-col-news/lorem.html",
+		"/Applications/MAMP/htdocs/WPDev1/wp-content/themes/travel-news/header.php",
+		"/Applications/MAMP/htdocs/WPDev1/wp-content/themes/underscores.me/header.php",
+		"/Applications/MAMP/htdocs/WPDev1/wp-content/themes/TravelGram/category.php",
+		"/Applications/MAMP/htdocs/WPDev1/wp-content/themes/TravelGram/templates/right-sidebar-page.php",
+		"/Applications/MAMP/htdocs/WPDev1/wp-content/themes/TravelGram/single.php",
+		"/Applications/MAMP/htdocs/WPDev1/wp-content/themes/TravelGram/functions.php",
+		"/Applications/MAMP/htdocs/WPDev1/wp-content/themes/TravelGram/style.css",
+		"/Users/annamcphee/Downloads/annatestingblog.com-themes-plugins-uploads-sqls-roots-contents-2017-11-13-20/wp-content/themes/index.php",
+		"/Applications/MAMP/htdocs/WPDev1/wp-content/themes/TravelGram/footer.php",
+		"/Applications/MAMP/htdocs/WPDev1/wp-content/themes/TravelGram/template-parts/content-single.php",
+		"/Applications/MAMP/htdocs/WPDev1/wp-content/themes/TravelGram/template-parts/content.php",
+		"/Applications/MAMP/htdocs/WPDev1/wp-content/themes/TravelGram/deleteme.php",
+		"/Applications/MAMP/htdocs/WPDev1/wp-content/themes/TravelGram/template-parts/content-none.php",
+		"/Applications/MAMP/htdocs/WPDev1/wp-content/themes/TravelGram/template-parts/content-featured-post.php",
+		"/Library/Application Support/appsolute/MAMP PRO/phpMyAdmin/doc/html/_static/jquery.js",
+		"/Applications/MAMP/htdocs/WPDev1/wp-content/themes/dyad-2-child/footer.php",
+		"/Applications/MAMP/htdocs/WPDev1/wp-content/themes/dyad-2-child/index.php",
+		"/Applications/MAMP/htdocs/WPDev1/wp-content/themes/dyad-2-child/template-parts/content-custom-header.php",
+		"/Applications/MAMP/htdocs/WPDev1/wp-content/themes/dyad-2-child/header.php",
+		"/Applications/MAMP/htdocs/WPDev1/wp-content/themes/dyad-2-child/single.php",
+		"/Applications/MAMP/htdocs/WPDev1/wp-content/themes/dyad-2-child/functions.php",
+		"/Applications/MAMP/htdocs/WPDev1/wp-content/themes/dyad-2-child/style.css",
+		"/Applications/MAMP/htdocs/WPDev1/wp-content/themes/dyad-2-child/templates/right-sidebar-page.php",
+		"/Applications/MAMP/htdocs/WPDev1/wp-content/themes/dyad-2-child/templates/left-sidebar-page.php",
+		"/Applications/MAMP/htdocs/WPDev1/wp-content/themes/dyad-2-wpcom/template-parts/content-blocks.php",
+		"/Applications/MAMP/htdocs/WPDev1/wp-content/themes/dyad-2-wpcom/archive.php",
+		"/Applications/MAMP/htdocs/WPDev1/wp-content/themes/dyad-2-child/template-parts/content-single.php",
+		"/Applications/MAMP/htdocs/WPDev1/wp-content/themes/dyad-2-wpcom/template-parts/content-custom-header.php",
+		"/Applications/MAMP/htdocs/WPDev1/wp-content/themes/dyad-2-wpcom/single.php",
+		"/Applications/MAMP/htdocs/WPDev1/wp-content/themes/dyad-2-wpcom/template-parts/content-single.php",
+		"/Applications/MAMP/htdocs/WPDev1/wp-content/themes/dyad-2-wpcom/style.css",
+		"/Applications/MAMP/htdocs/WPDev1/wp-content/themes/travelgram-retired/style.css",
+		"/Applications/MAMP/htdocs/WPDev1/wp-content/themes/dyad-2-wpcom/functions.php",
+		"/Travelgram",
+		"/Applications/MAMP/htdocs/WPDev1/wp-content/themes/travelgram/sidebar.php",
+		"/Applications/MAMP/htdocs/WPDev1/wp-content/themes/travelgram/template-parts/content-latest.php",
+		"/Applications/MAMP/htdocs/WPDev1/wp-content/themes/travelgram/header.php",
+		"/Applications/MAMP/htdocs/WPDev1/wp-content/themes/travelgram/functions.php",
+		"/Applications/MAMP/htdocs/WPDev1/wp-content/themes/travelgram/page-full-width.php",
+		"/Applications/MAMP/htdocs/WPDev1/wp-content/themes/travelgram/style.css",
+		"/Applications/MAMP/htdocs/WPDev1/wp-content/themes/travelgram/single.php",
+		"/Applications/MAMP/htdocs/WPDev1/wp-content/themes/travelgram/footer.php",
+		"/Applications/MAMP/htdocs/WPDev1/wp-content/themes/travelgram/post_destination.php",
+		"/Applications/MAMP/htdocs/WPDev1/wp-content/themes/travelgram/insta-single.php",
+		"/Applications/MAMP/htdocs/WPDev1/wp-content/themes/travelgram/fullwidth.php",
+		"/Users/annamcphee/Downloads/intergalactic-2-wpcom/content-single.php",
+		"/Applications/MAMP/htdocs/WPDev1/wp-content/themes/travel-gram/404.php",
+		"/Applications/MAMP/htdocs/WPDev1/wp-content/themes/travel-gram/inc/customizer.php",
+		"/Applications/MAMP/htdocs/WPDev1/wp-content/themes/travel-gram/inc/extras.php",
+		"/Applications/MAMP/htdocs/WPDev1/wp-content/themes/travel-gram/inc/plugin-compatibility/jetpack/jetpack.php",
+		"/Applications/MAMP/htdocs/WPDev1/wp-content/themes/travel-gram/inc/template-tags.php",
+		"/Applications/MAMP/htdocs/WPDev1/wp-content/themes/travel-gram/search.php",
+		"/Applications/MAMP/htdocs/WPDev1/wp-content/themes/travel-gram/sidebar.php",
+		"/Applications/MAMP/htdocs/WPDev1/wp-content/themes/travel-gram/single-attachment.php",
+		"/Applications/MAMP/htdocs/WPDev1/wp-content/themes/travel-gram/template-parts/content-none.php",
+		"/Applications/MAMP/htdocs/WPDev1/wp-content/themes/travel-gram/template-parts/content-notitle.php",
+		"/Applications/MAMP/htdocs/WPDev1/wp-content/themes/travel-gram/template-parts/content-search.php",
+		"/Applications/MAMP/htdocs/WPDev1/wp-content/themes/travel-gram/woocommerce.php",
+		"/Applications/MAMP/htdocs/WPDev1/wp-content/themes/meaningfultravel/functions.php",
+		"/Applications/MAMP/htdocs/WPDev1/wp-content/themes/meaningful_travel/footer-old.php",
+		"/Applications/MAMP/htdocs/WPDev1/wp-content/themes/meaningful_travel/sidebar-old.php",
+		"/Applications/MAMP/htdocs/WPDev1/wp-content/themes/meaningful_travel/header.php",
+		"/Applications/MAMP/htdocs/WPDev1/wp-content/themes/meaningful_travel/blog.css",
+		"/Applications/MAMP/htdocs/WPDev1/wp-content/themes/meaningful_travel/index.php",
+		"/Applications/MAMP/htdocs/WPDev1/wp-content/themes/meaningful_travel/README 2.md",
+		"/Applications/MAMP/htdocs/WPDev1/wp-content/themes/onepress/section-parts/section-gallery.php",
+		"/Applications/MAMP/htdocs/WPDev1/wp-content/themes/onepress-child/functions.php",
+		"/Applications/MAMP/htdocs/WPDev1/wp-content/themes/onepress-child/template-frontpage.php",
+		"/Applications/MAMP/htdocs/WPDev1/wp-content/themes/onepress/template-frontpage.php"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 101.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "composer.json",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 337,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 35.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "Oaxaca.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 406.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
