@@ -3,6 +3,9 @@
 	[
 		{
 			"path": "."
+		},
+		{
+			"path": "/Applications/MAMP/htdocs/WPDev1/wp-content/themes/Understrap"
 		}
 	]
 }

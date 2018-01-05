@@ -32,9 +32,9 @@ $container   = get_theme_mod( 'understrap_container_type' );
 
 			<main class="site-main" id="main">
 
-				<?php if ( understrap_has_featured_posts( 1 ) ) : ?>
+<?php if ( understrap_has_featured_posts( 1 ) ) : ?>
     <div class="featured-content">
- <p> We have featured posts! </p>
+        <?php get_template_part( 'content-featured' ); ?>
     </div>
 <?php endif; ?>
 
