@@ -1,14 +1,31 @@
 /*
- Theme Name:   Oaxaca
- Theme URI:    https://www.understrap.com
- Description:  An UnderStrap Child Theme
- Author:       Anna McPhee
- Author URI:   http://annamcphee.net
- Template:     understrap
- Version:      0.3.10
- License: GNU General Public License v2 or later
- License URI: http://www.gnu.org/licenses/gpl-2.0.html
- Text Domain:  understrap-child
- Tags: one-column, custom-menu, featured-images, theme-options, translation-ready
- GitHub Theme URI: holger1411/understrap-child
+Theme Name: Oaxaca
+Theme URI: http://fatthemes.com/loose
+Template: loose
+Author: Anna McPhee
+Author URI: http://fatthemes.com
+Description: Oaxaca is a Child Theme of Loose, by Fatthemes. Loose is a simply, elegant &amp; modern WordPress Blog Theme. Elegantly showcase your articles, photos, videos and more. This clean layout suitable for any type of site. Can be used for blog, magazine, news or fashion website. Loose is a minimal blog and magazine WordPress theme focused on content. With Loose you can create your own unique layout and style. Loose is fully responsive and looks great on any device. Loose have many features including: 3 Homepage Layouts, 4 Post Formats, 2 Page Layouts, 2 Single Post Layouts, 3 Widget Areas: Right Sidebar, Left Sidebar / Left Menu &amp; Top, Sticky Sidebar, 2 Menus: Top Menu &amp; Left Menu (main, mobile menu – toggled with button), all Theme Options Easily Customized by Native WordPress Customizer (Live Preview), Translation Ready, Child Template Included and much much more. Loose is easy to customize and well documented with great support and friendly help:) Enjoy:)
+Tags: translation-ready,grid-layout,blog,news,left-sidebar,right-sidebar,custom-background,two-columns,three-columns,featured-images,full-width-template,post-formats,sticky-post,theme-options,threaded-comments
+Version: 1.1.4.1515258303
+Updated: 2018-01-06 17:05:03
+
 */
+
+/* Site branding & Header Content */
+
+
+.site-branding {
+	background-image:url('http://localhost/WPDev1/wp-content/uploads/2018/01/lyon2-e1515213375581.png');
+	background-repeat:no-repeat;
+	background-size:contain;
+	background-position: left bottom;
+	
+}
+
+
+/* Headlines, Text & Font Styles */
+
+.headliner h1{
+	border-bottom: solid 1px;
+	font-size: 1.5em;
+}

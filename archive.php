@@ -1,11 +1,6 @@
 <?php
 /**
- * The main template file.
- *
- * This is the most generic template file in a WordPress theme
- * and one of the two required files for a theme (the other being style.css).
- * It is used to display a page when nothing more specific matches a query.
- * E.g., it puts together the home page when no home.php file exists.
+ * The template for displaying archive pages.
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
@@ -13,29 +8,40 @@
  */
 
 get_header(); ?>
+	<?php if ( is_category() ) : ?>
 
-		<?php if ( is_front_page() && is_home() ) : ?>
-
-		<?php get_template_part( 'template-parts/content', 'home-slider' ); ?>
-
+		<?php
+			$catmeta = get_term_meta( $cat );
+			$cat_bg_color = ( ! empty( $catmeta['bg_color'][0] ) ) ? '#' . $catmeta['bg_color'][0] : '';
+			$cat_text_color = ( ! empty( $catmeta['text_color'][0] ) ) ? '#' . $catmeta['text_color'][0] : '';
+			$catimage = ( ! empty( $catmeta['image'][0] ) ) ? $catmeta['image'][0] : '';
+			$catimgsrc = wp_get_attachment_image_src( $catimage, 'full' );
+		?>
+		<div class="row archive-loose-page-intro-row">
+		<div class="loose-page-intro col-xs-12" style="<?php echo 'background:' . esc_attr( $cat_bg_color ) . ' url(' . esc_url( $catimgsrc[0] ) . ') no-repeat center;color:' . esc_attr( $cat_text_color ) . ';'; ?>background-size:cover;">
+			<h1><?php echo esc_html( single_cat_title( '', false ) ); ?></h1>
+			<div class="row">
+			<?php the_archive_description( '<div class="taxonomy-description col-md-8 col-md-offset-2">', '</div>' ); ?>
+			</div>
+		</div>
+		</div>
 	<?php endif; ?>
-		 <?php get_sidebar( 'top' ); ?>
+	<?php get_sidebar( 'top' ); ?>
 	<div class="row">
-
 	<div id="primary" class="content-area
 	<?php
 	$loose_home_page_layout = get_theme_mod( 'home_page_layout', 'masonry' );
 			echo ( empty( $loose_home_page_layout ) ) ? ' col-md-12' : ' col-lg-8';
 			if ( ! empty( $loose_home_page_layout ) && ! is_active_sidebar( 'sidebar-1' ) ) :
 echo ' col-lg-push-2';
-endif;
-?>
-">
-			<?php if ( get_theme_mod( 'home_page_latest_posts_text', 1 ) ) : ?>
-			<div class="loose-page-intro">
-				<h2><span><?php echo esc_html__( 'Latest Posts', 'loose' ); ?> TESTING</span></h2>
-				<p id="today-date"></p>
-			</div>
+			endif;
+			?>
+			">
+			<?php if ( ! is_category() ) : ?>
+				<div class="loose-page-intro">
+			<h1><?php the_archive_title(); ?></h1>
+			<?php the_archive_description( '<div class="taxonomy-description">', '</div>' ); ?>
+		</div>
 			<?php endif; ?>
 		<main id="main" class="site-main row masonry-container" role="main">
 
@@ -46,16 +52,17 @@ endif;
 			while ( have_posts() ) :
 the_post();
 ?>
+
 				<?php
-				if ( loose_show_sticky() ) :
+
 					/*
 					 * Include the Post-Format-specific template for the content.
 					 * If you want to override this in a child theme, then include a file
 					 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
 					 */
 					get_template_part( 'template-parts/content-home', get_theme_mod( 'home_page_layout', 'masonry' ) );
-				 endif;
-				 ?>
+				?>
+
 			<?php endwhile; ?>
 
 			<?php the_posts_navigation(); ?>
