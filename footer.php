@@ -49,13 +49,17 @@
 		</div><!-- .left-sidebar-bg -->
 		
 		<footer id="colophon" class="site-footer" role="contentinfo">
-			<span class="headliner"><h1> Most Popular Stories </h1></span>
-			<div class="container-fluid">
-	<div class="row">
+	
+			<div class="container-fluid popular-posts">
+<span class="headliner"><h1> Most Popular</h1></span>
 
+	<div class="row">
+	
 			 <div class="card-deck">
+
+
 <?php
-query_posts('meta_key=post_views_count&orderby=meta_value_num&order=DESC');
+query_posts('meta_key=post_views_count&orderby=meta_value_num&order=DESC&limit=5');
 if (have_posts()) : while (have_posts()) : the_post();
 ?>
 

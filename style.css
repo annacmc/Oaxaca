@@ -26,11 +26,33 @@ Updated: 2018-01-06 17:05:03
 /* Headlines, Text & Font Styles */
 
 .headliner h1{
-	border-bottom: solid 1px;
+	border-bottom: solid .6px lightgrey;
 	font-size: 1.5em;
+	text-transform: uppercase;
+
+}
+
+.headliner {
+		text-align:left;
 }
 
 .card {
 
 	border: 0px;
+}
+
+
+
+
+/* footer content */
+
+.popular-posts {
+	background-color:rgb(245, 248, 250);
+	padding: 60px;
+width: 100vw;
+}
+
+.card-img-top {
+	height:250px;
+	object-fit: cover;
 }
