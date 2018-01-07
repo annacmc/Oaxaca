@@ -49,6 +49,37 @@
 		</div><!-- .left-sidebar-bg -->
 		
 		<footer id="colophon" class="site-footer" role="contentinfo">
+			<span class="headliner"><h1> Most Popular Stories </h1></span>
+			<div class="container-fluid">
+	<div class="row">
+
+			 <div class="card-deck">
+<?php
+query_posts('meta_key=post_views_count&orderby=meta_value_num&order=DESC');
+if (have_posts()) : while (have_posts()) : the_post();
+?>
+
+  <div class="card">
+    <?php if ( has_post_thumbnail() ) : ?>
+	<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
+	<img class="card-img-top" src="<?php the_post_thumbnail_url(); ?>"/>
+	</a>
+<?php endif; ?>
+    <div class="card-body">
+      <h5 class="card-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
+    
+      <p class="card-text"><small class="text-muted">Written by Author</small></p>
+    </div>
+  </div>
+
+
+<?php
+endwhile; endif;
+wp_reset_query();
+?>
+</div>
+</div>
+</div>
 		<div class="site-info">
 			<p><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
 			<?php

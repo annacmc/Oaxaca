@@ -25,7 +25,7 @@ echo ' col-lg-push-2'; }
 ?>
 ">
 		<main id="main" class="site-main row" role="main">
-			<div class="container">
+			<div class="container latest-posts">
 
 			<span class="headliner"><h1> Latest Posts </h1></span>
 
@@ -71,31 +71,7 @@ foreach($lastposts as $post) : setup_postdata($post); ?>
 <?php endwhile;
 wp_reset_query();
  // End of the loop. ?>
- <div class="card-deck">
-<?php
-query_posts('meta_key=post_views_count&orderby=meta_value_num&order=DESC');
-if (have_posts()) : while (have_posts()) : the_post();
-?>
 
-
-  <div class="card">
-    <?php if ( has_post_thumbnail() ) : ?>
-	<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
-	<img class="card-img-top" src="<?php the_post_thumbnail_url(); ?>"/>
-	</a>
-<?php endif; ?>
-    <div class="card-body">
-      <h5 class="card-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
-    
-      <p class="card-text"><small class="text-muted">Written by Author</small></p>
-    </div>
-  </div>
-
-<?php
-endwhile; endif;
-wp_reset_query();
-?>
-</div>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
