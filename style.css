@@ -56,3 +56,12 @@ width: 100vw;
 	height:250px;
 	object-fit: cover;
 }
+
+
+/* Styling popular posts widget */
+
+.fat-wpp-image img {
+    width: auto;
+}
+
+
