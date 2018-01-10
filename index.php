@@ -19,7 +19,13 @@ get_header(); ?>
 		<?php get_template_part( 'template-parts/content', 'home-slider' ); ?>
 
 	<?php endif; ?>
+	<div class="container">
+		<div class="row">
+			<div class="col-12 sidebar-top">
 		 <?php get_sidebar( 'top' ); ?>
+		</div>
+		</div>
+	</div>
 	<div class="row">
 
 	<div id="primary" class="content-area
