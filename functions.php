@@ -6,6 +6,16 @@ if ( !defined( 'ABSPATH' ) ) exit;
 // AUTO GENERATED - Do not modify or remove comment markers above or below:
 
 // END ENQUEUE PARENT ACTION
+
+//enqueue bootstrap in the child theme 
+function oaxaca_enqueue_styles() {
+
+wp_enqueue_script('bootstrap-js', get_stylesheet_directory_uri().'/inc/js/bootstrap.min.js');
+wp_enqueue_style('bootstrap-css', get_stylesheet_directory_uri().'/inc/css/bootstrap.min.css');
+
+}
+add_action( 'wp_enqueue_scripts', 'oaxaca_enqueue_styles' );
+
 /**
  * Prints the Breadcrumb in Storefront using the function by Yoast SEO.
  */
