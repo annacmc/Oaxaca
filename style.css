@@ -32,6 +32,144 @@ Updated: 2018-01-12 01:45:05
 	text-rendering: auto;
 }
 
-.no-wc-breadcrumb .site-header {
+.no-wc-breadcrumb .site-header, .site-header {
     margin-bottom: 0;
 }
+/* top bar styling */
+
+#topbar {
+    background-color: #1F1F20;
+    height: 40px;
+    line-height: 40px;
+}
+
+#topbar p {
+    color: #fff;
+}
+
+/* Popular Posts Styling GRID */
+
+/*
+ * The container of our grid.
+ */
+.wpp-grid {
+    overflow: hidden;
+    margin: 2.5em auto;
+    padding: 0;
+}
+ 
+    /*
+     * The container of each post.
+     *
+     * Each LI will use relative positioning so we can freely move
+     * the elements inside them (namely the post title and the overlay)
+     * using CSS3 animations.
+     */
+    .wpp-grid li {
+        position: relative;
+        display: inline;
+        float: left;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        width: 33.333%;
+    }
+         
+        /*
+         * The thumbnail.
+         *
+         * By settings its width to 100% and its height to auto
+         * we are making sure it adapts its size to the container
+         * while maintaining its aspect ratio.
+         */
+        .wpp-grid li .wpp-thumbnail {
+            display: block;
+            width: 100%;
+            height: auto;
+            border: none;
+        }
+     
+        /*
+         * The overlay.
+         *
+         * It's initial position is outside the LI element (top: 100%),
+         * hiding it from view.
+         */
+        .wpp-grid li .wpp-grid-overlay {
+            position: absolute;
+            display: block;
+            top: 100%;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            opacity: 0;
+            transition: all 0.4s;
+            background: rgb(0, 0, 0);
+            background: rgba(0, 0, 0, 0.9);
+        }
+         
+        /*
+         * This defines how the overlay behaves when hovering over a post.
+         *
+         * The overlay is positioned inside the container (LI) and its opacity
+         * is also gradually set to 100% (1) during the animation.
+         */
+        .wpp-grid li:hover .wpp-grid-overlay {
+            top: 0;
+            opacity: 1;
+        }
+         
+        /*
+         * The post title.
+         *
+         * Like the overlay, this element is also hidden from view.
+         * It's positioned at the top of its container (LI) and its
+         * opacity is set to 0 (invisible).
+         */
+        .wpp-grid li .wpp-post-title {
+            position: absolute;
+            display: block;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            padding: 0 15px;
+            width: 100%;
+            line-height: 1em;
+            text-align: center;
+            transition: all 0.4s;
+            box-sizing: border-box;
+        }
+         
+        /*
+         * This defines how the post title behaves when hovering over a post.
+         *
+         * The title is positioned at the center of its container (LI) and its opacity
+         * is also gradually set to 100% (1) during the animation.
+         */
+        .wpp-grid li:hover .wpp-post-title {
+            top: 50%;
+            opacity: 1;
+            transform: translateY(-50%);
+        }
+     
+    /*
+     * Responsive CSS rules.
+     *
+     * These are specific to my theme. You'll have to adjust these to fit yours.
+     */
+     
+    /* When the screen width is 940 or lower, switch to a two columns grid. */
+    @media ( max-width: 940px ) {
+        .wpp-grid li {
+            width: 50%;
+        }
+    }
+     
+    /* When the screen width is 480 or lower, switch to a one column grid. */
+    @media ( max-width: 480px ) {
+        .wpp-grid li {
+            float: none;
+            clear: both;
+            width: 100%;
+        }
+    }
