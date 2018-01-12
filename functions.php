@@ -30,3 +30,44 @@ function storefront_add_topbar() {
     <?php
 }
 add_action( 'storefront_before_header', 'storefront_add_topbar' );
+
+/* Add Collections Taxonomy */
+
+add_action( 'init', 'create_collection_taxonomy' );
+
+function create_collection_taxonomy() {
+	$labels = array(
+		'name'                           => 'collections',
+		'singular_name'                  => 'collection',
+		'search_items'                   => 'Search collections',
+		'all_items'                      => 'All collections',
+		'edit_item'                      => 'Edit collection',
+		'update_item'                    => 'Update collection',
+		'add_new_item'                   => 'Add New collection',
+		'new_item_name'                  => 'New collection Name',
+		'menu_name'                      => 'collection',
+		'view_item'                      => 'View collection',
+		'popular_items'                  => 'Popular collection',
+		'separate_items_with_commas'     => 'Separate collections with commas',
+		'add_or_remove_items'            => 'Add or remove collections',
+		'choose_from_most_used'          => 'Choose from the most used collections',
+		'not_found'                      => 'No collections found'
+	);
+
+	register_taxonomy(
+		'collection',
+		'post',
+		array(
+			'label' => __( 'collection' ),
+			'hierarchical' => false,
+			'labels' => $labels,
+			'public' => true,
+			'show_in_nav_menus' => false,
+			'show_tagcloud' => false,
+			'show_admin_column' => true,
+			'rewrite' => array(
+				'slug' => 'collections'
+			)
+		)
+	);
+}
