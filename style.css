@@ -10,4 +10,28 @@ Version: 1.0.0.1515721505
 Updated: 2018-01-12 01:45:05
 
 */
+.breadcrumbs {
+	background-color: #f8f8f8;
+	margin-left: -99em;
+	margin-right: -99em;
+	margin-bottom: 4.235801032em;
+	padding: 1.41575em 99em;
+}
 
+.breadcrumbs a {
+	color: #92969e;
+	font-weight: initial;
+}
+
+.breadcrumbs > span > span > a:first-of-type:before {
+	content: "\f015";
+	display: inline-block;
+	font: normal normal normal 1em/1 FontAwesome;
+	-webkit-font-smoothing: antialiased;
+	margin-right: .5407911001em;
+	text-rendering: auto;
+}
+
+.no-wc-breadcrumb .site-header {
+    margin-bottom: 0;
+}
