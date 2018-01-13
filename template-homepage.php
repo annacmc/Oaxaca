@@ -99,7 +99,7 @@ if ( has_post_thumbnail() ) : ?>
 	</article>
 
 	</div>
-	
+
 	<div  id="popular-posts" class="row row-full">
 
 			<h1 class="underline-header"> Most Popular </h1>

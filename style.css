@@ -314,4 +314,5 @@ ol.wpp-list li span.wpp-stats { display:block; }
     border-bottom-style:solid;
     border-bottom-color: rgb(232, 232, 232);
     display:block;
+    width:100%;
 }
