@@ -12,15 +12,16 @@
 		</div><!-- .col-full -->
 	</div><!-- #content -->
 	<?php do_action( 'storefront_before_footer' ); ?>
-<div class="container-fluid"><div class="row">
+<div class="container-fluid"><div class="row no-gutters">
 				 <?php if ( is_active_sidebar( 'full_width_footer' ) ) : ?>
-	<div id="full-width-footer" class="widget-area col-12">
+	<div id="full-width-footer" class="widget-area col-12 no-gutters">
 		<?php dynamic_sidebar( 'full_width_footer' ); ?>
 	</div><!-- #footer-sidebar -->
 <?php endif; ?></div></div>
+
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		
-		<div class="col-full">
+		<div class="col-12">
 
 
 			<?php

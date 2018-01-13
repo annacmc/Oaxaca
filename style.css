@@ -11,10 +11,33 @@ Updated: 2018-01-12 01:45:05
 
 */
 
+.site-footer .col-4 {
+
+    max-width: 100% !important;
+
+}
+.header-info {
+
+     width: 100vw;
+ position: relative;
+ margin-left: -50vw;
+ left: 50%;
+ padding: 30px 0 30px 0;
+    background-color: grey;
+    margin-bottom: 4em;
+    text-align:center;
+    min-height: 200px;
+}
+
 .page-template-template-homepage .site-main
  {
 	padding-top: 0 !important;
 }
+
+.archive .breadcrumbs {
+    margin-bottom: 0em !important;
+}
+
 .breadcrumbs {
 	background-color: #f8f8f8;
 	margin-left: -99em;
@@ -22,6 +45,8 @@ Updated: 2018-01-12 01:45:05
 	margin-bottom: 4.235801032em;
 	padding: 1.41575em 99em;
 }
+
+
 
 .breadcrumbs a {
 	color: #92969e;
@@ -317,10 +342,7 @@ ol.wpp-list li span.wpp-stats { display:block; }
     width:100%;
 }
 
-#full-width-footer {
 
-    display:block;
-    width: 100%;
-    margin: auto;
-    text-align: center;
+#full-width-footer img {
+    border-radius: 0px;
 }
