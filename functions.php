@@ -17,6 +17,24 @@ wp_enqueue_style('bootstrap-css', get_stylesheet_directory_uri().'/inc/css/boots
 add_action( 'wp_enqueue_scripts', 'oaxaca_enqueue_styles' );
 
 /**
+ * Register Widget Areas for the Child Theme
+ *
+ */
+function oaxaca_widgets_init() {
+
+	register_sidebar( array(
+		'name'          => 'Full Width Footer',
+		'id'            => 'full_width_footer',
+		'before_widget' => '<div class="full-width-footer-widget">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h2>',
+		'after_title'   => '</h2>',
+	) );
+
+}
+add_action( 'widgets_init', 'oaxaca_widgets_init' );
+
+/**
  * Prints the Breadcrumb in Storefront using the function by Yoast SEO.
  */
 function storefront_yoast_breadcrumb() {
