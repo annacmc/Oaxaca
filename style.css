@@ -27,7 +27,31 @@ Updated: 2018-01-12 01:45:05
     margin-bottom: 4em;
     text-align:center;
     min-height: 200px;
+
 }
+
+.header-wrap-post span{
+
+    text-transform: uppercase;
+    font-size: .8em;
+        color:white;
+        margin:auto;
+}
+
+.header-wrap-post h1 {
+text-shadow:0 1px 1px rgba(0,0,0,.4), 0 2px 20px rgba(0,0,0,.3);
+        font-weight: 500;
+    max-width: 800px;
+    font-size: 2.6em;
+    text-transform: uppercase;
+    color:white;
+        margin:auto;
+ 
+}
+
+
+
+
 
 .page-template-template-homepage .site-main
  {
