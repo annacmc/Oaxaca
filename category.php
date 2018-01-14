@@ -29,13 +29,13 @@ get_header(); ?>
 }
 
   ?>
-  	<header class="page-header"><div id="masthead" class="container-fluid header-info" style="background: url('<?php if ( is_front_page() && is_home() ) : 
+  	<header class="page-header"><div id="masthead" class="header-wrap-post container-fluid header-info text-center" style="background: url('<?php if ( is_front_page() && is_home() ) : 
 
-    echo $backgroundImg;  else: echo $featuredImg; endif; ?>') no-repeat center center / cover; "> <?
+    echo $backgroundImg;  else: echo $featuredImg; endif; ?>') no-repeat center center / cover; "> <?php
+          the_archive_title( '<h1 class="header-page-title">', '</h1>' );
+          the_archive_description( '<div class="header-archive-description">', '</div>' );
+        ?>
 
-					the_archive_title( '<h1 class="page-title">', '</h1>' );
-					the_archive_description( '<div class="taxonomy-description">', '</div>' );
-				?>
 			</div>
 			</header><!-- .page-header -->
 
@@ -52,7 +52,7 @@ get_header(); ?>
 
 if ( function_exists('wpp_get_mostpopular') ) {
 
-	 ?><h1 class="underline-header"> Most Popular in <?php the_archive_title() ?>  </h1><?php
+	 ?><h1 class="underline-header"> Most Popular <?php the_archive_title() ?> Stories</h1><?php
 
     // WPP parameters
     $args = array(
