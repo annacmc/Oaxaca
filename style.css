@@ -39,17 +39,21 @@ Updated: 2018-01-12 01:45:05
 }
 
 .header-wrap-post h1 {
-text-shadow:0 1px 1px rgba(0,0,0,.4), 0 2px 20px rgba(0,0,0,.3);
-        font-weight: 100;
-    font-size: 2.8em;
+
     text-transform: uppercase;
-    color:white;
+    color:black;
         margin:auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 60px;
+    letter-spacing: 3px;
+    line-height: .8em;
+
  
 }
 
 .header-page-title {
-    background-color:black;
+    background-color:white;
     display:inline;
     padding: 0px 15px 0px 15px;
     margin-top: 20px;
@@ -521,5 +525,11 @@ font-family: 'Roboto', sans-serif;
 #full-width-footer{
 
     margin-bottom:0;
+}
+
+#full-width-footer h2{
+
+    text-align: center;
+
 }
 

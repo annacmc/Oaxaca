@@ -33,6 +33,24 @@ function oaxaca_widgets_init() {
 		'after_title'   => '</h2>',
 	) );
 
+		register_sidebar( array(
+		'name'          => 'Home Page 1',
+		'id'            => 'home_page_1',
+		'before_widget' => '<div class="home-page-1-widget">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h2>',
+		'after_title'   => '</h2>',
+	) );
+
+				register_sidebar( array(
+		'name'          => 'Home Page 2',
+		'id'            => 'home_page_2',
+		'before_widget' => '<div class="home-page-2-widget">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h2>',
+		'after_title'   => '</h2>',
+	) );
+
 }
 add_action( 'widgets_init', 'oaxaca_widgets_init' );
 
