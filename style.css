@@ -510,3 +510,16 @@ font-family: 'Roboto', sans-serif;
     display:none;
 }
 
+#footer-widget-container.container-fluid{
+
+    margin:0;
+    padding:0;
+    width:100%;
+
+}
+
+#full-width-footer{
+
+    margin-bottom:0;
+}
+
