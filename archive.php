@@ -47,7 +47,7 @@ get_header(); ?>
 
 			<?php if ( have_posts() ) : 
 
-      the_archive_description( '<div class="header-archive-description">', '</div>' ); 
+      the_archive_description( '<div id="archive-description">', '</div>' ); 
 
 
 // Most Popular Posts

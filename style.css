@@ -433,3 +433,12 @@ ol.wpp-list li span.wpp-stats { display:block; }
 #full-width-footer img {
     border-radius: 0px;
 }
+
+#archive-description {
+
+padding:20px;
+background-color:#f2f2f2;
+width:95%;
+margin:10px auto 30px auto;
+text-align: center;
+}
