@@ -77,13 +77,12 @@ if ( function_exists('wpp_get_mostpopular') ) {
 
 		endif; ?>
 
-<div class="popular-tags"><?php wp_tag_cloud( 'smallest=15&largest=15&number=7&orderby=count' ); ?></div>
+<div class="popular-tags"><strong>Popular Tags </strong><i class="fa fa-tag"> </i> <?php wp_tag_cloud( 'smallest=11&largest=11&number=9&orderby=count&separator=, ' ); ?></div>
 
 
 			<?php if ( have_posts() ) :
 
-      the_archive_title( '<h1 class="underline-header"> All ', ' Stories</h1>' );
-
+    
 		while ( have_posts() ) : the_post();
 
 	/**

@@ -7,14 +7,16 @@ if ( !defined( 'ABSPATH' ) ) exit;
 
 // END ENQUEUE PARENT ACTION
 
-//enqueue bootstrap in the child theme 
+/*enqueue bootstrap in the child theme */
 function oaxaca_enqueue_styles() {
 
 wp_enqueue_script('bootstrap-js', get_stylesheet_directory_uri().'/inc/js/bootstrap.min.js');
 wp_enqueue_style('bootstrap-css', get_stylesheet_directory_uri().'/inc/css/bootstrap.min.css');
+wp_enqueue_style('font-awesome-css', get_stylesheet_directory_uri().'/font-awesome/css/font-awesome.css');
 
 }
 add_action( 'wp_enqueue_scripts', 'oaxaca_enqueue_styles' );
+
 
 /**
  * Register Widget Areas for the Child Theme
