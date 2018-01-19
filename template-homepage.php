@@ -126,7 +126,7 @@ if ( function_exists('wpp_get_mostpopular') ) {
 </div>
 	</div>
 
-</div
+</div>
 
 
 		</main><!-- #main -->

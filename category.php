@@ -33,7 +33,7 @@ get_header(); ?>
 
     echo $backgroundImg;  else: echo $featuredImg; endif; ?>') no-repeat center center / cover; "> <?php
           the_archive_title( '<h1 class="header-page-title">', '</h1>' );
-          the_archive_description( '<div class="header-archive-description">', '</div>' );
+      
         ?>
 
 			</div>
@@ -42,26 +42,27 @@ get_header(); ?>
 		<? endif; ?>
 
 
-	<div id="primary" class="content-area">
+	<div id="primary">
 		<main id="main" class="site-main" role="main">
+
 
 			<?php if ( have_posts() ) : 
 
+      the_archive_description( '<div class="header-archive-description">', '</div>' );
 
-// Somewhere inside your archive.php template ...
+
+// Most Popular Posts
 
 if ( function_exists('wpp_get_mostpopular') ) {
-
-	 ?><h1 class="underline-header"> Most Popular <?php the_archive_title() ?> Stories</h1><?php
 
     // WPP parameters
     $args = array(
         'range' => 'weekly',
-        'limit' => 6,
+        'limit' => 4,
          'post_type' => 'post',
           'thumbnail_width' => 500,
         'wpp_start' => '<div class="row">',
-        'post_html' => ' <div class="popular-post-col col-xs-12 col-md-6 col-lg-2"> <div class="classWithPad">{thumb_img}<span class="post-card-title">{title}</span></div></div>',
+        'post_html' => ' <div class="popular-post-archive col-xs-12 col-md-6 col-lg-6"> <div class="classWithPad">{thumb_img}<p><span class="post-card-title">{title}</span></p></div></div>',
         'wpp_end' => '</div>'
     );
 
@@ -71,15 +72,26 @@ if ( function_exists('wpp_get_mostpopular') ) {
     }
 
     wpp_get_mostpopular( $args );
+    wp_reset_query();
 
 }
 
+		endif; ?>
 
+			<?php if ( have_posts() ) :
 
-?>
+      the_archive_title( '<h1 class="underline-header"> All ', ' Stories</h1>' );
 
+		while ( have_posts() ) : the_post();
 
-			<?php get_template_part( 'loop' );
+	/**
+	 * Include the Post-Format-specific template for the content.
+	 * If you want to override this in a child theme, then include a file
+	 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
+	 */
+	get_template_part( 'content-archive', get_post_format() );
+
+endwhile;
 
 		else :
 
@@ -87,9 +99,9 @@ if ( function_exists('wpp_get_mostpopular') ) {
 
 		endif; ?>
 
+
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
 <?php
-do_action( 'storefront_sidebar' );
 get_footer();
