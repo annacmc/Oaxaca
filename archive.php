@@ -60,8 +60,9 @@ if ( function_exists('wpp_get_mostpopular') ) {
         'limit' => 2,
          'post_type' => 'post',
           'thumbnail_width' => 500,
+           'excerpt_length' => 155,
         'wpp_start' => '<div class="row">',
-        'post_html' => ' <div class="popular-posts-archive col-xs-12 col-md-6 col-lg-6"> <div class="pop-img">{thumb_img}<div class="pop-text">{title}</div><p>{summary}</p></div></div>',
+        'post_html' => ' <div class="popular-posts-archive col-xs-12 col-md-6 col-lg-6"> <div class="pop-img">{thumb_img}<div class="pop-text">{title}</div><span>{summary}</span></div></div>',
         'wpp_end' => '</div>'
     );
 
