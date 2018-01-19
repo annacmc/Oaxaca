@@ -45,10 +45,9 @@ get_header(); ?>
 	<div id="primary">
 		<main id="main" class="site-main" role="main">
 
-
 			<?php if ( have_posts() ) : 
 
-      the_archive_description( '<div class="header-archive-description">', '</div>' );
+      the_archive_description( '<div class="header-archive-description">', '</div>' ); 
 
 
 // Most Popular Posts
@@ -58,11 +57,11 @@ if ( function_exists('wpp_get_mostpopular') ) {
     // WPP parameters
     $args = array(
         'range' => 'weekly',
-        'limit' => 4,
+        'limit' => 2,
          'post_type' => 'post',
           'thumbnail_width' => 500,
         'wpp_start' => '<div class="row">',
-        'post_html' => ' <div class="popular-post-archive col-xs-12 col-md-6 col-lg-6"> <div class="classWithPad">{thumb_img}<p><span class="post-card-title">{title}</span></p></div></div>',
+        'post_html' => ' <div class="popular-posts archive col-xs-12 col-md-6 col-lg-6"> <div class="classWithPad pop-img">{thumb_img}<p><div class="pop-text post-card-title">{title}</div></p></div></div>',
         'wpp_end' => '</div>'
     );
 
@@ -77,6 +76,9 @@ if ( function_exists('wpp_get_mostpopular') ) {
 }
 
 		endif; ?>
+
+<div class="popular-tags"><?php wp_tag_cloud( 'smallest=15&largest=15&number=7&orderby=count' ); ?></div>
+
 
 			<?php if ( have_posts() ) :
 
