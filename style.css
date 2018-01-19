@@ -286,7 +286,32 @@ ol.wpp-list li span.wpp-stats { display:block; }
         }
     }
 
-    /* Sticky Featured Posts
+    /* Sticky Featured Posts */
+
+a.sticky-title, span.sticky-tag{
+
+    text-transform: uppercase;
+
+    margin:auto;
+}
+
+span.sticky-tag{
+
+    font-size:12px;
+    letter-spacing: 1.2px;
+
+
+    }
+
+    a.sticky-title {
+
+        font-weight:500;
+        font-size:23px;
+ letter-spacing: .2px;
+ line-height: .8em;
+    }
+
+
 
     /*
  * The container of our grid.
@@ -296,6 +321,7 @@ ol.wpp-list li span.wpp-stats { display:block; }
     margin: 2.5em auto;
     padding: 0;
     object-fit:cover;
+        text-align: center;
 }
  
     /*
@@ -407,17 +433,26 @@ ol.wpp-list li span.wpp-stats { display:block; }
 
 }
 
+.home article h2 a {
 
-#popular-posts .post-card-title {
+            font-weight:500;
+        font-size:23px;
+ letter-spacing: .2px;
+ line-height: .8em;
+text-transform: uppercase;
+}
+
+.home a.wpp-post-title {
 
 
 	text-align: center;
 	text-transform: capitalize;
     display:block;
-    font-size:.7em;
     color:black;
-    font-weight: 400;
-     padding:10px;
+    font-weight:400;
+    font-size:16px;
+ letter-spacing: .2px;
+ line-height: 1.2em;
 }
 
 .underline-header {
