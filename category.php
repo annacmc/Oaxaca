@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying archive pages.
+ * The template for displaying category archive pages.
  *
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
@@ -49,51 +49,61 @@ get_header(); ?>
 
       the_archive_description( '<div id="archive-description">', '</div>' ); 
 
+$counter = 1;
 
-// Most Popular Posts
 
-if ( function_exists('wpp_get_mostpopular') ) {
+    while ( have_posts() ) : the_post();
 
-    // WPP parameters
-    $args = array(
-        'range' => 'weekly',
-        'limit' => 2,
-         'post_type' => 'post',
-          'thumbnail_width' => 500,
-           'excerpt_length' => 155,
-        'wpp_start' => '<div class="row">',
-        'post_html' => ' <div class="popular-posts-archive col-xs-12 col-md-6 col-lg-6"> <div class="pop-img">{thumb_img}<div class="pop-text">{title}</div><span>{summary}</span></div></div>',
-        'wpp_end' => '</div>'
-    );
+if( $counter == 1 ) {  ?>
 
-    // Get the category ID so we can use it with the wpp_get_mostpopular() template tag
-    if ( is_category() ) {
-        $args['cat'] = get_queried_object_id();
-    }
+<div class="row"><!-- highlighted content row-->
+<div class="popular-posts-archive col-xs-12 col-md-6 col-lg-6">
+  <div class="pop-img"><?if ( has_post_thumbnail() ) : ?>
+  <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
+  <img class="latest-posts-thumbnail" src="<?php the_post_thumbnail_url(); ?>"/>
+  </a>
+<?php endif;  ?><div class="pop-text"><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?>
+  </a></div><span> <?php the_excerpt(); ?></span></div></div>
 
-    wpp_get_mostpopular( $args );
-    wp_reset_query();
 
-}
+<? } elseif( $counter == 2 ) {  ?>
 
-		endif; ?>
+
+
+<div class="popular-posts-archive col-xs-12 col-md-6 col-lg-6">
+  <div class="pop-img"><?if ( has_post_thumbnail() ) : ?>
+  <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
+  <img class="latest-posts-thumbnail" src="<?php the_post_thumbnail_url(); ?>"/>
+  </a>
+<?php endif;  ?><div class="pop-text"><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?>
+  </a></div><span> <?php the_excerpt(); ?></span></div></div>
 
 <div class="popular-tags"><strong>Popular Tags </strong><i class="fa fa-tag"> </i> <?php wp_tag_cloud( 'smallest=11&largest=11&number=9&orderby=count&separator=, ' ); ?></div>
 
+</div><!--end highlighted content row-->
+ <? } else { ?>
 
-			<?php if ( have_posts() ) :
 
-    
-		while ( have_posts() ) : the_post();
 
-	/**
-	 * Include the Post-Format-specific template for the content.
-	 * If you want to override this in a child theme, then include a file
-	 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-	 */
-	get_template_part( 'content-archive', get_post_format() );
+
+<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+  <div class="row"><div class="col-xs-12 col-sm-12 col-md-5 col-lg-5"><?
+if ( has_post_thumbnail() ) : ?>
+  <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
+  <img class="latest-posts-thumbnail" src="<?php the_post_thumbnail_url(); ?>"/>
+  </a>
+<?php endif;  ?></div><div class="col-xs-12 col-sm-12 col-md-7 col-lg-7">
+    <h2><a href="<?php the_permalink(); ?>" title="Read more"><?php the_title(); ?></a></h2>
+    <?php the_excerpt(); ?>
+</div></div>
+</div><!-- #post-## -->
+
+ <? }
+
+$counter++;
 
 endwhile;
+
 
 		else :
 
