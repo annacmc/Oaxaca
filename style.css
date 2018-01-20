@@ -124,8 +124,12 @@ Updated: 2018-01-12 01:45:05
 	padding-top: 0 !important;
 }
 
-.archive .breadcrumbs {
+.archive .breadcrumbs, .page-template-page_collections .breadcrumbs{
     margin-bottom: 0em !important;
+}
+
+.page-template-page_collections .entry-header{
+    display:none;
 }
 
 .breadcrumbs {
@@ -488,11 +492,11 @@ text-align: center;
 
     width:100%;
     text-align: center;
-    padding:0px;
     height:230px;
     display:table;
     margin-bottom:2em;
     position: relative;
+
 }
 
 
@@ -504,6 +508,7 @@ text-align: center;
     background-size:cover;
     position: relative;
     display: table-cell;
+
 
 
 
@@ -543,6 +548,23 @@ font-family: 'Roboto', sans-serif;
   text-transform: uppercase;
   display:block;
  
+}
+
+.overlay {
+      background-image: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0.7)
+    );
+    bottom: 0;
+    left: 0;
+    opacity: 0.5;
+    position: absolute;
+    right:0;
+    top:0;
+
+    padding:0;
+    z-index:0;
 }
 
 .wpp-no-data {

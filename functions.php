@@ -93,7 +93,7 @@ function create_collection_taxonomy() {
 		'update_item'                    => 'Update collection',
 		'add_new_item'                   => 'Add New collection',
 		'new_item_name'                  => 'New collection Name',
-		'menu_name'                      => 'collection',
+		'menu_name'                      => 'Collection',
 		'view_item'                      => 'View collection',
 		'popular_items'                  => 'Popular collection',
 		'separate_items_with_commas'     => 'Separate collections with commas',
