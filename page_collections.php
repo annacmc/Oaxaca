@@ -74,7 +74,7 @@ if ( have_posts() ) :
                 <div class="col-md-6 col-sm-12 destinations">
                  <div class="col-12 destination-grid" style="background-image: url(<?php 
 echo get_the_post_thumbnail_url(); ?>);">
-                     <span class="text-overlay"> <h2><a href="<?php bloginfo( 'wpurl' ); ?>/collection/<?php echo $cat->slug ?>">
+                     <span class="text-overlay"> <h2><a href="<?php bloginfo( 'wpurl' ); ?>/collections/<?php echo $cat->slug ?>">
                           <?php echo $cat->name ?></a></h2>
                           <p><?php echo $cat->description ?></p></span>
                         
@@ -89,7 +89,7 @@ echo get_the_post_thumbnail_url(); ?>);">
             }
         }
 ?>
-</div> <!-- end browse by destination -->
+</div> <!-- end browse by collection -->
 
 
     </main><!-- #main -->
