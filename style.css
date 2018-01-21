@@ -31,11 +31,12 @@ Updated: 2018-01-12 01:45:05
  position: relative;
  margin-left: -50vw;
  left: 50%;
- padding: 30px 0 30px 0;
+ padding: 80px 0 30px 0;
     background-color: grey;
     margin-bottom: 4em;
     text-align:center;
     min-height: 200px;
+
 
 }
 
@@ -48,13 +49,12 @@ Updated: 2018-01-12 01:45:05
 }
 
 .header-wrap-post h1 {
-
     text-transform: uppercase;
     color:black;
         margin:auto;
-    font-weight: 400;
+    font-weight: 100;
     font-style: normal;
-    font-size: 60px;
+    font-size: 50px;
     letter-spacing: 3px;
     line-height: .8em;
 
@@ -64,8 +64,9 @@ Updated: 2018-01-12 01:45:05
 .header-page-title {
     background-color:white;
     display:inline;
-    padding: 0px 15px 0px 15px;
-    margin-top: 20px;
+    padding: 0px 10px 0px 10px;
+    border: thin grey solid;
+
 }
  .pop-img img{
     border-radius:0px;
