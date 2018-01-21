@@ -152,6 +152,18 @@ if ( ! function_exists( 'storefront_post_meta' ) ) {
 			</div>
 			<?php
 			/* translators: used between list items, there is a space after the comma */
+			$collection_list = get_the_term_list($post->ID, 'collection', '',  ', ');
+
+						if ( $collection_list ) : ?>
+				<div class="collection-links">
+					<?php
+					echo '<div class="label">' . esc_attr( __( 'Collection', 'storefront' ) ) . '</div>';
+					echo wp_kses_post( $collection_list );
+					?>
+				</div>
+			<?php endif; // End if collections. ?>
+			<?php
+			/* translators: used between list items, there is a space after the comma */
 			$categories_list = get_the_category_list( __( ', ', 'storefront' ) );
 
 			if ( $categories_list ) : ?>
@@ -162,18 +174,7 @@ if ( ! function_exists( 'storefront_post_meta' ) ) {
 					?>
 				</div>
 			<?php endif; // End if categories. ?>
-<?php
-			/* translators: used between list items, there is a space after the comma */
-			$collection_list = get_the_term_list($post->ID, 'collection');
 
-			if ( $collection_list ) : ?>
-				<div class="collection-links">
-					<?php
-					echo '<div class="label"> ' . esc_attr( __( 'Collections', 'storefront' ) ). '</div>';
-					echo wp_kses_post( $collection_list );
-								?>
-				</div>
-			<?php endif; // End if collections. ?>
 			<?php
 			/* translators: used between list items, there is a space after the comma */
 			$tags_list = get_the_tag_list( '', __( ', ', 'storefront' ) );

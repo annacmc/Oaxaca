@@ -652,3 +652,7 @@ font-family: 'Roboto', sans-serif;
 .single .author img {
     border-radius: 50%;
 }
+
+div.collection-links {
+   margin-bottom: 1.618em;
+}
