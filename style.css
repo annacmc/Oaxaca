@@ -633,6 +633,10 @@ font-family: 'Roboto', sans-serif;
         text-align:center;
    }
 
+#post-navigation {
+
+    display:none;
+}
 /* Style 'Featured Collection' on Home Page */
 
 .featured-collection img, .featured-collection-small img{
@@ -656,3 +660,33 @@ font-family: 'Roboto', sans-serif;
 div.collection-links {
    margin-bottom: 1.618em;
 }
+
+/* Styling SideBar */
+
+#secondary.widget-area .widget {
+    
+    background-color:#f1f0ec;
+    padding: 20px;
+    
+}
+
+#secondary.widget-area .widget:nth-child(2n+0) {
+    background: #fbf5bc;
+}
+
+#secondary.widget-area .widget:nth-child(3n+0) {
+    background: #f5f8fa;
+}
+
+#secondary.widget-area .widget .widget-title, .widget .widgettitle {
+
+    background-color: white;
+    padding: 0 5px 0 5px;
+    border-radius: 0;
+    text-align: center;
+    display: inline-block;
+    border:none;
+
+}
+
+
