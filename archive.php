@@ -11,12 +11,8 @@ get_header(); ?>
 
 
 
-    <?php if ( have_posts() ) : ?>
+    <?php if ( have_posts() ) : 
 
-    
-
-
-<?php    
 
   $backgroundImg = get_header_image();
      
