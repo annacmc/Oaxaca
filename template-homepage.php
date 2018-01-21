@@ -71,7 +71,8 @@ get_header(); ?>
            <?php 
            $temp = $wp_query; $wp_query= null;
            $args = array(
-               'posts_per_page' => 4,
+               'posts_per_page' => 3,
+               'offset' => 3,
                'post__not_in'  => get_option( 'sticky_posts' )
            );
            $wp_query = new WP_Query(); $wp_query->query( $args);
@@ -81,9 +82,15 @@ get_header(); ?>
              <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
                <img class="latest-posts-thumbnail" src="<?php the_post_thumbnail_url(); ?>"/>
            </a>
-       <?php endif;  ?></div><div class="col-xs-12 col-sm-12 col-md-7 col-lg-7">
+       <?php endif;  ?></div><div class="col-xs-12 col-sm-12 col-md-7 col-lg-7 content-area">
           <h2><a href="<?php the_permalink(); ?>" title="Read more"><?php the_title(); ?></a></h2>
-          <?php the_excerpt(); ?>
+          <?php 
+$excerpt = get_the_excerpt();
+$excerpt = substr( $excerpt , 0, 100); 
+echo $excerpt;;
+echo get_avatar( get_the_author_meta( 'ID' ), 32 ); ?>
+
+
       </div></div>
   <?php endwhile; ?>
 
@@ -117,6 +124,47 @@ get_header(); ?>
 <?php endif; ?> 
 </div><!-- end home-page-2 widgets row -->
 </div><!-- end widgets container -->
+
+ <article>
+          <div class="container-fluid latest-posts-listing">
+           <h1 class="underline-header"> More Stories </h1>
+
+
+           <?php 
+           $temp = $wp_query; $wp_query= null;
+           $args = array(
+               'posts_per_page' => 3,
+               'post__not_in'  => get_option( 'sticky_posts' )
+           );
+           $wp_query = new WP_Query(); $wp_query->query( $args);
+           while ($wp_query->have_posts()) : $wp_query->the_post(); 
+             ?><div class="row"><div class="col-xs-12 col-sm-12 col-md-5 col-lg-5"><?
+             if ( has_post_thumbnail() ) : ?>
+             <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
+               <img class="latest-posts-thumbnail" src="<?php the_post_thumbnail_url(); ?>"/>
+           </a>
+       <?php endif;  ?></div><div class="col-xs-12 col-sm-12 col-md-7 col-lg-7 content-area">
+          <h2><a href="<?php the_permalink(); ?>" title="Read more"><?php the_title(); ?></a></h2>
+          <?php 
+$excerpt = get_the_excerpt();
+$excerpt = substr( $excerpt , 0, 100); 
+echo $excerpt;;
+echo get_avatar( get_the_author_meta( 'ID' ), 32 ); ?>
+
+
+      </div></div>
+  <?php endwhile; ?>
+
+  <?php if ($paged > 1) { ?>
+
+  <?php } else { ?>
+
+
+  <?php } ?>
+
+  <?php wp_reset_postdata(); ?>
+
+</article>
 </div>
 </div>
 

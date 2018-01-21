@@ -11,6 +11,15 @@ Updated: 2018-01-12 01:45:05
 
 */
 
+   .latest-posts-listing p, .latest-posts-listing h2 a{
+
+    text-align: justify;
+}
+
+.latest-posts-listing .content-area {
+        padding:0 40px 0 40px;
+}
+
 .site-footer .col-4 {
 
     max-width: 100% !important;
@@ -459,7 +468,7 @@ text-transform: uppercase;
  line-height: 1.2em;
 }
 
-.underline-header {
+.underline-header, #home-page-1 h2{
 
     font-size: 27px;
     text-transform: uppercase;
@@ -623,3 +632,5 @@ font-family: 'Roboto', sans-serif;
        padding:0px 15px 0px 15px;
         text-align:center;
    }
+
+
