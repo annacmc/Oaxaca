@@ -88,7 +88,7 @@ get_header(); ?>
 $excerpt = get_the_excerpt();
 $excerpt = substr( $excerpt , 0, 100); 
 echo $excerpt;;
-echo get_avatar( get_the_author_meta( 'ID' ), 32 ); ?>
+ ?>
 
 
       </div></div>
@@ -149,7 +149,7 @@ echo get_avatar( get_the_author_meta( 'ID' ), 32 ); ?>
 $excerpt = get_the_excerpt();
 $excerpt = substr( $excerpt , 0, 100); 
 echo $excerpt;;
-echo get_avatar( get_the_author_meta( 'ID' ), 32 ); ?>
+?>
 
 
       </div></div>

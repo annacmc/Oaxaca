@@ -633,4 +633,12 @@ font-family: 'Roboto', sans-serif;
         text-align:center;
    }
 
+/* Style 'Featured Collection' on Home Page */
+
+.featured-collection img, .featured-collection-small img{
+    border-radius:0;
+    object-fit: cover;
+}
+
+
 
