@@ -216,9 +216,9 @@ if ( ! function_exists( 'oaxaca_home_meta' ) ) {
 			?>
 			<div class="author">
 				<?php
-					echo '<span class="label">' . esc_attr( __( 'Bsy ', 'storefront' ) );
+					echo '<span class="label">' . esc_attr( __( 'By ', 'storefront' ) );
 					the_author_posts_link();
-					echo '</span'
+					echo '</span>'
 				?>
 			</div>
 			<?php
@@ -235,7 +235,8 @@ if ( ! function_exists( 'oaxaca_home_meta' ) ) {
 			<?php endif; // End if categories. ?>
 			<?php
 			/* translators: used between list items, there is a space after the comma */
-			$collection_list = get_the_term_list($post->ID, 'collection');
+			$collection_list = get_the_term_list($post->ID, 'collection', '',  ', ');
+
 
 			if ( $collection_list ) : ?>
 				<div class="collection-links">
@@ -245,20 +246,6 @@ if ( ! function_exists( 'oaxaca_home_meta' ) ) {
 					echo '</span>'					?>
 				</div>
 			<?php endif; // End if collections. ?>
-
-			<?php
-			/* translators: used between list items, there is a space after the comma */
-			$tags_list = get_the_tag_list( '', __( ', ', 'storefront' ) );
-
-			if ( $tags_list ) : ?>
-				<div class="tags-links">
-					<?php
-					echo '<span class="label"> <i class="fa fa-tag"> </i> ' . esc_attr( __( '', 'storefront' ) );
-					echo wp_kses_post( $tags_list );
-					echo '</span>'
-					?>
-				</div>
-			<?php endif; // End if $tags_list. ?>
 
 		<?php endif; // End if 'post' == get_post_type(). ?>
 

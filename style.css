@@ -645,9 +645,18 @@ font-family: 'Roboto', sans-serif;
     object-fit: cover;
 }
 
+
 /* Style homepage meta info */
 .home .cat-links,.home .collection-links {
     display:inline;
+}
+
+.home .collection-links {
+  padding-left:10px;
+}
+
+.home div.collection-links,.home div.collection-links a,.home div.cat-links,.home div.cat-links a{
+ color:lightgrey;
 }
 
 .home .author {
