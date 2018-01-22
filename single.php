@@ -20,18 +20,18 @@ get_header(); ?>
 
 		endwhile; // End of the loop. ?>
 
-		</main><!-- #main -->
-
-		<div class="container-fluid single-post-widgets">
+		<div class="single-post-widgets">
 			<div class="row">
 
-				<?php if ( is_active_sidebar( 'single-post' ) ) : ?>
+				<?php if ( is_active_sidebar( 'bottom-of-post-widget' ) ) : ?>
 					<div id="home-page-1" class="widget-area col-12">
-						<?php dynamic_sidebar( 'single-post' ); ?>
+						<?php dynamic_sidebar( 'bottom-of-post-widget' ); ?>
 					</div><!-- #footer-sidebar -->
 				<?php endif; ?> 
 			</div><!-- end home-page-1 widgets row -->
 </div><!-- end widget container -->
+		</main><!-- #main -->
+
 		</div><!-- #primary -->
 
 <?php

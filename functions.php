@@ -51,9 +51,9 @@ function oaxaca_widgets_init() {
 		'after_title'   => '</h2>',
 	) );
 								register_sidebar( array(
-		'name'          => 'Single Post',
-		'id'            => 'single-post',
-		'before_widget' => '<div class="single-post-widget">',
+		'name'          => 'Bottom of Post Widget',
+		'id'            => 'bottom-of-post-widget',
+		'before_widget' => '<div class="bottom-of-post-widget">',
 		'after_widget'  => '</div>',
 		'before_title'  => '<h2>',
 		'after_title'   => '</h2>',
@@ -262,3 +262,4 @@ if ( ! function_exists( 'oaxaca_home_meta' ) ) {
 		<?php
 	}
 }
+
