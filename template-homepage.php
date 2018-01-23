@@ -148,7 +148,6 @@ oaxaca_home_meta();
           <h2><a href="<?php the_permalink(); ?>" title="Read more"><?php the_title(); ?></a></h2>
           <?php 
 $excerpt = get_the_excerpt();
-$excerpt = substr( $excerpt , 0, 150); 
 echo $excerpt;
 oaxaca_home_meta(); ?>
 
