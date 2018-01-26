@@ -128,6 +128,11 @@ function create_collection_taxonomy() {
 			)
 		)
 	);
+
+}
+
+add_action( 'init', 'create_destination_taxonomy' );
+function create_destination_taxonomy() {
 	
 	$labels2 = array(
 		'name'                           => 'destinations',
@@ -159,7 +164,7 @@ function create_collection_taxonomy() {
 			'show_tagcloud' => false,
 			'show_admin_column' => true,
 			'rewrite' => array(
-				'slug' => 'destinations'
+				'slug' => 'destination'
 			)
 		)
 	);
