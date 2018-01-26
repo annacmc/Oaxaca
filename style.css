@@ -11,6 +11,11 @@ Updated: 2018-01-12 01:45:05
 
 */
 
+#masthead span.vcard {
+
+  color:black;
+}
+
 #full-width-footer .jr-insta-thumb li {
 
   padding:6px;
@@ -682,16 +687,6 @@ div.collection-links {
     
 }
 
-
-
-#secondary.widget-area .widget .wpp-post-title {
-
-  text-size:20px;
-  text-transform: uppercase;
-  text-align: center;
-  margin-top:10px;
-}
-
 #secondary.widget-area .widget:nth-child(2n+0) {
     background: #fbf5bc;
 }
@@ -718,4 +713,5 @@ width: 300px;
  border-radius: 0;
  position: relative;
 }
+
 
