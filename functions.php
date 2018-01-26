@@ -149,7 +149,8 @@ function create_destination_taxonomy() {
 		'separate_items_with_commas'     => 'Separate destinations with commas',
 		'add_or_remove_items'            => 'Add or remove destinations',
 		'choose_from_most_used'          => 'Choose from the most used destinations',
-		'not_found'                      => 'No destinations found'
+		'not_found'                      => 'No destinations found',
+		'rewrite' => array('slug' => 'sections', 'with_front' => false)
 	);
 
 	register_taxonomy(

@@ -494,6 +494,11 @@ text-transform: uppercase;
     border-radius: 0px;
 }
 
+.jr-insta-thumb li {
+
+  padding:6px;
+}
+
 #archive-description {
 
 padding:20px;
