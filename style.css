@@ -551,22 +551,21 @@ text-align: center;
 
 .destination-grid h2 a{
 
-font-family: 'Roboto', sans-serif;
-  font-weight: 900;
-  color: white;
+  font-weight: 300;
+  color: black;
   text-transform: uppercase;
   margin: 0;
   position: relative;
   font-size: 2rem;
+  background-color: rgba(255, 255, 255, 0.7);
 
 
 }
 
 .destination-grid p{
 
-    font-family: 'Roboto', sans-serif;
-  font-weight: 200;
-  color: white;
+  font-weight: 100;
+  color: black;
   text-transform: uppercase;
   display:block;
  
@@ -575,8 +574,8 @@ font-family: 'Roboto', sans-serif;
 .overlay {
       background-image: 
     linear-gradient(
-      rgba(0, 0, 0, 0.7),
-      rgba(0, 0, 0, 0.7)
+      rgba(255, 255, 255, 0.4),
+      rgba(255, 255, 255, 0.4)
     );
     bottom: 0;
     left: 0;
