@@ -135,7 +135,7 @@ add_action( 'init', 'create_destination_taxonomy' );
 function create_destination_taxonomy() {
 	
 	$labels2 = array(
-		'name'                           => 'destinations',
+		'name'                           => 'destination',
 		'singular_name'                  => 'destination',
 		'search_items'                   => 'Search destinations',
 		'all_items'                      => 'All destinations',
@@ -160,7 +160,7 @@ function create_destination_taxonomy() {
 			'hierarchical' => true,
 			'labels' => $labels2,
 			'public' => true,
-			'show_in_nav_menus' => true,
+			'show_in_nav_menus' => false,
 			'show_tagcloud' => false,
 			'show_admin_column' => true,
 			'rewrite' => array(
