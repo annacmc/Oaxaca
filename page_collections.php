@@ -76,14 +76,7 @@ if ( have_posts() ) :
 echo get_the_post_thumbnail_url(); ?>);">
                      <span class="text-overlay"> <h2><a href="<?php bloginfo( 'wpurl' ); ?>/collections/<?php echo $cat->slug ?>">
                           <?php echo $cat->name ?></a></h2>
-                          <p><?php $excerpt = $cat->description;
-                          $excerpt = substr( $excerpt , 0, 20); 
-echo $excerpt;
-
-
-
-
-                           ?></p></span>
+</span>
                         
                     
                     <div class="overlay"></div></div>

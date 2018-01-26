@@ -699,4 +699,11 @@ div.collection-links {
 
 }
 
+#trending-img img{
+height: 200px;
+width: 300px;
+  object-fit:cover;   
+ border-radius: 0;
+ position: relative;
+}
 
