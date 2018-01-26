@@ -89,6 +89,8 @@ add_action( 'storefront_before_header', 'storefront_add_topbar' );
 
 /* Add Collections Taxonomy */
 
+
+
 add_action( 'init', 'create_collection_taxonomy' );
 
 function create_collection_taxonomy() {
@@ -126,6 +128,30 @@ function create_collection_taxonomy() {
 			)
 		)
 	);
+
+		// Add Destination taxonomy, make it hierarchical (like categories)
+	$labels = array(
+		'name'              => _x( 'destination', 'taxonomy general name' ),
+		'singular_name'     => _x( 'Destination', 'taxonomy singular name' ),
+		'search_items'      => __( 'Search Destinations' ),
+		'all_items'         => __( 'All Destinations' ),
+		'parent_item'       => __( 'Parent Destination' ),
+		'parent_item_colon' => __( 'Parent Destination:' ),
+		'edit_item'         => __( 'Edit Destination' ),
+		'update_item'       => __( 'Update Destination' ),
+		'add_new_item'      => __( 'Add New Destination' ),
+		'new_item_name'     => __( 'New Destination Name' ),
+		'menu_name'         => __( 'Destination' ),
+	);
+	$args = array(
+		'hierarchical'      => true,
+		'labels'            => $labels,
+		'show_ui'           => true,
+		'show_admin_column' => true,
+		'query_var'         => true,
+		'rewrite'           => array( 'slug' => 'destination' ),
+	);
+	register_taxonomy( 'destination', array( 'post' ), $args );
 }
 
 /* Remove Category Prefix */
