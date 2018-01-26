@@ -1,7 +1,7 @@
 <?php
-/* Template Name: Collections Index Template */ 
+/* Template Name: Destinations Index Template */ 
 /**
- * The template for displaying all collections
+ * The template for displaying all destinations
  *
  *
  * @package storefront
@@ -70,7 +70,7 @@ if ( have_posts() ) :
       $taxonomyName = "destination";
       $parent_terms = get_terms($taxonomyName, array('parent' => 0, 'orderby' => 'slug', 'hide_empty' => false));   
       foreach ($parent_terms as $pterm) {
-        echo '<div class="row"><div class="col-12 text-center"><h2 class="linethrough">'.$pterm->name.'<a href="'.$pterm->slug.'">view all '.$pterm->name.' posts</a></h2><p>'.$pterm->description.'</p></div></div>';
+        echo '<div class="row"><div class="col-12 text-center"><h2 class="underline-header">'.$pterm->name.'<a href="'.$pterm->slug.'">view all '.$pterm->name.' posts</a></h2><p>'.$pterm->description.'</p></div></div>';
         $terms = get_terms($taxonomyName, array('parent' => $pterm->term_id, 'orderby' => 'slug', 'hide_empty' => false));
         echo '<div class="row">';
         foreach ($terms as $term) {
