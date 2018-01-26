@@ -73,20 +73,6 @@ function storefront_yoast_breadcrumb() {
 add_action( 'storefront_content_top', 'storefront_yoast_breadcrumb' );
 
 
-/**
- * Adds a top bar to Storefront, before the header.
- */
-function storefront_add_topbar() {
-    ?>
-    <div id="topbar">
-        <div class="col-full">
-            <p>Your text here</p>
-        </div>
-    </div>
-    <?php
-}
-add_action( 'storefront_before_header', 'storefront_add_topbar' );
-
 /* Add Collections Taxonomy */
 
 
