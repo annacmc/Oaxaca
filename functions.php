@@ -128,30 +128,42 @@ function create_collection_taxonomy() {
 			)
 		)
 	);
+	
+	$labels2 = array(
+		'name'                           => 'destinations',
+		'singular_name'                  => 'destination',
+		'search_items'                   => 'Search destinations',
+		'all_items'                      => 'All destinations',
+		'edit_item'                      => 'Edit destination',
+		'update_item'                    => 'Update destination',
+		'add_new_item'                   => 'Add New destination',
+		'new_item_name'                  => 'New destination Name',
+		'menu_name'                      => 'Destination',
+		'view_item'                      => 'View destinations',
+		'popular_items'                  => 'Popular destinations',
+		'separate_items_with_commas'     => 'Separate destinations with commas',
+		'add_or_remove_items'            => 'Add or remove destinations',
+		'choose_from_most_used'          => 'Choose from the most used destinations',
+		'not_found'                      => 'No destinations found'
+	);
 
-		// Add Destination taxonomy, make it hierarchical (like categories)
-	$labels = array(
-		'name'              => _x( 'destination', 'taxonomy general name' ),
-		'singular_name'     => _x( 'Destination', 'taxonomy singular name' ),
-		'search_items'      => __( 'Search Destinations' ),
-		'all_items'         => __( 'All Destinations' ),
-		'parent_item'       => __( 'Parent Destination' ),
-		'parent_item_colon' => __( 'Parent Destination:' ),
-		'edit_item'         => __( 'Edit Destination' ),
-		'update_item'       => __( 'Update Destination' ),
-		'add_new_item'      => __( 'Add New Destination' ),
-		'new_item_name'     => __( 'New Destination Name' ),
-		'menu_name'         => __( 'Destination' ),
+	register_taxonomy(
+		'destination',
+		'post',
+		array(
+			'label' => __( 'destination' ),
+			'hierarchical' => true,
+			'labels' => $labels2,
+			'public' => true,
+			'show_in_nav_menus' => true,
+			'show_tagcloud' => false,
+			'show_admin_column' => true,
+			'rewrite' => array(
+				'slug' => 'destinations'
+			)
+		)
 	);
-	$args = array(
-		'hierarchical'      => true,
-		'labels'            => $labels,
-		'show_ui'           => true,
-		'show_admin_column' => true,
-		'query_var'         => true,
-		'rewrite'           => array( 'slug' => 'destination' ),
-	);
-	register_taxonomy( 'destination', array( 'post' ), $args );
+	
 }
 
 /* Remove Category Prefix */

@@ -70,7 +70,7 @@ if ( have_posts() ) :
       $taxonomyName = "destination";
       $parent_terms = get_terms($taxonomyName, array('parent' => 0, 'orderby' => 'slug', 'hide_empty' => false));   
       foreach ($parent_terms as $pterm) {
-        echo '<div class="row"><div class="col-12 text-center"><h2 class="underline-header">'.$pterm->name.'<a href="'.$pterm->slug.'">view all '.$pterm->name.' posts</a></h2><p>'.$pterm->description.'</p></div></div>';
+        echo '<div class="row"><div class="col-12"><h2 class="underline-header">'.$pterm->name.'<a href="'.$pterm->slug.'">view all '.$pterm->name.' posts</a></h2><p>'.$pterm->description.'</p></div></div>';
         $terms = get_terms($taxonomyName, array('parent' => $pterm->term_id, 'orderby' => 'slug', 'hide_empty' => false));
         echo '<div class="row">';
         foreach ($terms as $term) {
@@ -83,12 +83,12 @@ if ( have_posts() ) :
             $taxonomy->the_post();
             ?>
 
-            <div class="col-md-3 destinations">
+            <div class="col-sm-6 col-md-6 col-lg-4 destinations">
              <div class="col-12 destination-grid" style="background-image: url(<?php 
               echo get_the_post_thumbnail_url(); ?>);">
               <span class="text-overlay"> <h2><a href="<?php bloginfo( 'wpurl' ); ?>/destination/<?php echo $term->slug ?>">
                 <?php echo $term->name ?></a></h2>
-                <p><?php echo $term->description ?></p></span>
+               </span>
 
 
                 <div class="overlay"></div></div>

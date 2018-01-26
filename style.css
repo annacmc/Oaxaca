@@ -134,7 +134,7 @@ Updated: 2018-01-12 01:45:05
 	padding-top: 0 !important;
 }
 
-.archive .breadcrumbs, .page-template-page_collections .breadcrumbs{
+.archive .breadcrumbs, .page-template-page_destinations .breadcrumbs, .page-template-page_collections .breadcrumbs{
     margin-bottom: 0em !important;
 }
 
@@ -486,6 +486,7 @@ text-transform: uppercase;
  font-size:15px;
  float: right;
  text-transform:uppercase;
+
 }
 
 
