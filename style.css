@@ -76,7 +76,8 @@ Updated: 2018-01-12 01:45:05
     background-color:white;
     display:inline;
     padding: 0px 10px 0px 10px;
-    border: thin grey solid;
+    border: 0.3px lightgrey solid;
+    
 
 }
  .pop-img img{
