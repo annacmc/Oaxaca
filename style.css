@@ -11,6 +11,12 @@ Updated: 2018-01-12 01:45:05
 
 */
 
+#full-width-footer .jr-insta-thumb li {
+
+  padding:6px;
+}
+
+
    .latest-posts-listing p, .latest-posts-listing h2 a{
 
     text-align: justify;
@@ -494,10 +500,6 @@ text-transform: uppercase;
     border-radius: 0px;
 }
 
-.jr-insta-thumb li {
-
-  padding:6px;
-}
 
 #archive-description {
 
@@ -572,11 +574,6 @@ text-align: center;
 }
 
 .overlay {
-      background-image: 
-    linear-gradient(
-      rgba(255, 255, 255, 0.4),
-      rgba(255, 255, 255, 0.4)
-    );
     bottom: 0;
     left: 0;
     opacity: 0.5;
