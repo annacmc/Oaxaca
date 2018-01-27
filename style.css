@@ -11,6 +11,16 @@ Updated: 2018-01-12 01:45:05
 
 */
 
+.archive span.vcard{
+    color:black;
+    font-size:40px;
+}
+
+.archive h1.header-page-title {
+    color:grey;
+    font-size:40px;
+}
+
 #masthead span.vcard {
 
   color:black;
@@ -77,7 +87,7 @@ Updated: 2018-01-12 01:45:05
     display:inline;
     padding: 0px 10px 0px 10px;
     border: 0.3px lightgrey solid;
-    
+
 
 }
  .pop-img img{
