@@ -17,6 +17,8 @@ wp_enqueue_style('font-awesome-css', get_stylesheet_directory_uri().'/font-aweso
 }
 add_action( 'wp_enqueue_scripts', 'oaxaca_enqueue_styles' );
 
+   
+add_theme_support( 'jetpack-social-menu' );
 
 /**
  * Register Widget Areas for the Child Theme

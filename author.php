@@ -9,7 +9,9 @@
 
 get_header(); ?>
 
-
+<?php 
+$curauth = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name) : get_userdata(intval($author));
+?>
 
 		<?php if ( have_posts() ) : ?>
 
@@ -44,6 +46,22 @@ get_header(); ?>
 
 	<div id="primary">
 		<main id="main" class="site-main" role="main">
+
+      <p>This is <?php echo $curauth->nickname; ?>'s page</p>
+<?    echo  $curauth->aim;
+echo $curauth->description;
+echo $curauth->display_name;
+echo $curauth->first_name;
+echo $curauth->ID;
+echo $curauth->jabber;
+echo $curauth->last_name;
+echo $curauth->nickname;
+echo $curauth->user_email;
+echo $curauth->user_login;
+echo $curauth->user_nicename;
+echo $curauth->user_registered;
+echo $curauth->user_url;
+echo $curauth->yim;
 
 			<?php if ( have_posts() ) : 
 

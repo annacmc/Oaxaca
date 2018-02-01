@@ -16,7 +16,8 @@ get_header(); ?>
 
 <div id="primary" class="content-area">
   <main id="main" class="site-main" role="main">
-    <div id="sticky-posts">
+
+    <div id="sticky-posts row-full">
 
         <ul class="sticky-featured">
             <?
