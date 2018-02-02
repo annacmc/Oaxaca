@@ -64,7 +64,8 @@ oaxaca_home_meta();
 </article>
 </div>
 
-    <div id="sticky-posts row-full">
+    <div id="sticky-posts" class="row-full">
+
 
         <ul class="sticky-featured">
             <?
