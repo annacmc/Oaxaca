@@ -17,6 +17,53 @@ get_header(); ?>
 <div id="primary" class="content-area">
   <main id="main" class="site-main" role="main">
 
+       <div id="first-post">
+
+
+
+       <article>
+          <div class="container-fluid first-post-listing">
+
+
+           <?php 
+           $temp = $wp_query; $wp_query= null;
+           $args = array(
+               'posts_per_page' => 1,
+               'offset' => 0,
+               'post__not_in'  => get_option( 'sticky_posts' )
+           );
+           $wp_query = new WP_Query(); $wp_query->query( $args);
+           while ($wp_query->have_posts()) : $wp_query->the_post(); 
+             ?><div class="row"><div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 content-area">
+          <h2><a href="<?php the_permalink(); ?>" title="Read more"><?php the_title(); ?></a></h2>
+          <?php 
+$excerpt = get_the_excerpt();
+$excerpt = substr( $excerpt , 0, 100); 
+echo $excerpt;
+oaxaca_home_meta();
+ ?>
+
+
+      </div><div class="col-xs-12 col-sm-12 col-md-8 col-lg-8"><?
+             if ( has_post_thumbnail() ) : ?>
+             <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
+               <img class="first-post-thumbnail" src="<?php the_post_thumbnail_url(); ?>"/>
+           </a>
+       <?php endif;  ?></div></div>
+  <?php endwhile; ?>
+
+  <?php if ($paged > 1) { ?>
+
+  <?php } else { ?>
+
+
+  <?php } ?>
+
+  <?php wp_reset_postdata(); ?>
+
+</article>
+</div>
+
     <div id="sticky-posts row-full">
 
         <ul class="sticky-featured">
@@ -136,6 +183,7 @@ oaxaca_home_meta();
            $temp = $wp_query; $wp_query= null;
            $args = array(
                'posts_per_page' => 3,
+               'offset' => 4,
                'post__not_in'  => get_option( 'sticky_posts' )
            );
            $wp_query = new WP_Query(); $wp_query->query( $args);

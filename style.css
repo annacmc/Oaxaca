@@ -195,26 +195,6 @@ Updated: 2018-01-12 01:45:05
 .page-template-template-homepage  .breadcrumbs{
 	display:none;
 }
-/* top bar styling */
-
-#topbar {
-    background-color: #1F1F20;
-    height: 40px;
-    line-height: 40px;
-}
-
-#topbar p {
-    color: #fff;
-}
-
-.row-full{
- width: 100vw;
- position: relative;
- margin-left: -50vw;
- left: 50%;
- padding: 30px 0 30px 0;
-}
-
 
 
 /*
@@ -388,6 +368,31 @@ span.sticky-tag{
             width: 100%;
         }
     }
+
+        .first-post-thumbnail {
+      object-fit:cover;
+    height:530px;
+      width: 100%;
+      margin-bottom: 30px;
+       border-radius: 0;
+       padding-top:20px;
+    
+
+     }
+
+#first-post article {
+
+  margin-top:30px;
+}
+#first-post article .first-post-listing a{
+  
+      text-align: left;
+      text-transform: none;
+     }
+
+.first-post-listing .content-area{
+          padding-top:20px;
+     }
 
     /* Latest posts home page styling */
 
