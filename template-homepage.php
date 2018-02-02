@@ -70,7 +70,7 @@ oaxaca_home_meta();
         <ul class="sticky-featured">
             <?
             $args = array(
-               'posts_per_page' => 3,
+               'posts_per_page' => 4,
                'post__in'  => get_option( 'sticky_posts' ),
                'ignore_sticky_posts' => 1
            );

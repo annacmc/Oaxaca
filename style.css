@@ -707,10 +707,14 @@ width: 300px;
 
 .row-full {  
   
+  padding: 10px 30px 0px 30px;
   width: 100vw;
   position: relative;
   left: 50%;
   right: 50%;
   margin-left: -50vw;
-  margin-right: -50vw;}
+  margin-right: -50vw;
+  background-color:#f8f9fa;}
+
+ 
 
