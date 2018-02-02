@@ -390,6 +390,11 @@ span.sticky-tag{
       text-transform: none;
      }
 
+     #first-post h2 a{
+            color:black;
+      font-size:1.1em;
+     }
+
 .first-post-listing .content-area{
           padding-top:20px;
      }
