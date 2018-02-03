@@ -13,96 +13,29 @@ get_header(); ?>
 $curauth = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name) : get_userdata(intval($author));
 ?>
 
-		<?php if ( have_posts() ) : ?>
+	
+  	<header class="page-header">
+      <div id="author-description" class="row">
 
-		
+  <div class="col-xs-12 col-sm-12 col-md-4 text-right"><? echo get_avatar( get_the_author_meta('user_email'), $size = '350'); ?></div>
+  <div class="col-xs-12 col-sm-12 col-md-8">
+<h3><? echo $curauth->display_name; ?></h3><p><?
+echo $curauth->description; ?></p>
+</div>
 
-
-<?php 	 
-
-  $backgroundImg = get_header_image();
-     
-    if ( has_post_thumbnail() ) {
-    $large_image_url = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'large' );
-    if ( ! empty( $large_image_url[0] ) ) {
-        $featuredImg = get_the_post_thumbnail_url(); 
-
-    }
-}
-
-  ?>
-  	<header class="page-header"><div id="masthead" class="header-wrap-post container-fluid header-info text-center" style="background: url('<?php if ( is_front_page() && is_home() ) : 
-
-    echo $backgroundImg;  else: echo $featuredImg; endif; ?>') no-repeat center center / cover; "> <?php
-          the_archive_title( '<h1 class="header-page-title">', '</h1>' );
-      
-        ?>
-
-			</div>
+ 
+</div>
 			</header><!-- .page-header -->
 
-		<? endif; ?>
 
 
 	<div id="primary">
 		<main id="main" class="site-main" role="main">
 
-      <p>This is <?php echo $curauth->nickname; ?>'s page</p>
-<?    echo  $curauth->aim;
-echo $curauth->description;
-echo $curauth->display_name;
-echo $curauth->first_name;
-echo $curauth->ID;
-echo $curauth->jabber;
-echo $curauth->last_name;
-echo $curauth->nickname;
-echo $curauth->user_email;
-echo $curauth->user_login;
-echo $curauth->user_nicename;
-echo $curauth->user_registered;
-echo $curauth->user_url;
-echo $curauth->yim;
+<h2 class="underline-header"><? echo $curauth->first_name; ?>'s Stories</h2>
+ <? if ( have_posts() ) : 
 
-			<?php if ( have_posts() ) : 
-
-      the_archive_description( '<div id="archive-description">', '</div>' ); 
-
-$counter = 1;
-
-
-    while ( have_posts() ) : the_post();
-
-if( $counter == 1 ) {  ?>
-
-<div class="row"><!-- highlighted content row-->
-<div class="popular-posts-archive col-xs-12 col-md-6 col-lg-6">
-  <div class="pop-img"><?if ( has_post_thumbnail() ) : ?>
-  <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
-  <img class="latest-posts-thumbnail" src="<?php the_post_thumbnail_url(); ?>"/>
-  </a>
-<?php endif;  ?><div class="pop-text"><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?>
-  </a></div><span> <?php the_excerpt(); ?></span></div></div>
-
-
-<? } elseif( $counter == 2 ) {  ?>
-
-
-
-<div class="popular-posts-archive col-xs-12 col-md-6 col-lg-6">
-  <div class="pop-img"><?if ( has_post_thumbnail() ) : ?>
-  <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
-  <img class="latest-posts-thumbnail" src="<?php the_post_thumbnail_url(); ?>"/>
-  </a>
-<?php endif;  ?><div class="pop-text"><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?>
-  </a></div><span> <?php the_excerpt(); ?></span></div></div>
-
-<div class="popular-tags"><strong>Popular Tags </strong><i class="fa fa-tag"> </i> <?php wp_tag_cloud( 'smallest=11&largest=11&number=9&orderby=count&separator=, ' ); ?></div>
-
-</div><!--end highlighted content row-->
- <? } else { ?>
-
-
-
+ while ( have_posts() ) : the_post(); ?>
 
 <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
   <div class="row"><div class="col-xs-12 col-sm-12 col-md-5 col-lg-5"><?
@@ -112,14 +45,12 @@ if ( has_post_thumbnail() ) : ?>
   </a>
 <?php endif;  ?></div><div class="col-xs-12 col-sm-12 col-md-7 col-lg-7">
     <h2><a href="<?php the_permalink(); ?>" title="Read more"><?php the_title(); ?></a></h2>
-    <?php the_excerpt(); ?>
+    <?php the_excerpt(); 
+    ?> <p>by <?php the_author();?></p>
 </div></div>
 </div><!-- #post-## -->
 
- <? }
-
-$counter++;
-
+<?
 endwhile;
 
 
