@@ -38,15 +38,15 @@ echo $curauth->description; ?></p>
  while ( have_posts() ) : the_post(); ?>
 
 <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-  <div class="row"><div class="col-xs-12 col-sm-12 col-md-5 col-lg-5"><?
+  <div class="row"><div class="col-xs-12 col-sm-12 col-md-6 col-lg-6"><?
 if ( has_post_thumbnail() ) : ?>
   <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
   <img class="latest-posts-thumbnail" src="<?php the_post_thumbnail_url(); ?>"/>
   </a>
-<?php endif;  ?></div><div class="col-xs-12 col-sm-12 col-md-7 col-lg-7">
+<?php endif;  ?></div><div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
     <h2><a href="<?php the_permalink(); ?>" title="Read more"><?php the_title(); ?></a></h2>
     <?php the_excerpt(); 
-    ?> <p>by <?php the_author();?></p>
+    ?> <p class="tiny-face"><? echo get_avatar( get_the_author_meta('user_email'), $size = '30'); ?> by <?php the_author();?></p>
 </div></div>
 </div><!-- #post-## -->
 

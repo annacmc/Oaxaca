@@ -717,10 +717,18 @@ width: 300px;
   background-color:#f8f9fa;}
 
  
-.author .avatar {
+#author-description .avatar {
     
     width:230px;
     border-radius:50%;
+}
+
+.tiny-face .avatar {
+   
+    width:30px;
+    border-radius:50%;
+    display:inline;
+    margin:8px;
 }
 
 #author-description p {
