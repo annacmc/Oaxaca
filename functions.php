@@ -254,13 +254,13 @@ if ( ! function_exists( 'oaxaca_home_meta' ) ) {
 			<?php if ( 'post' == get_post_type() ) : // Hide category and tag text for pages on Search.
 
 			?>
-			<div class="author">
+			<div class="author"><p class="tiny-face"><? echo get_avatar( get_the_author_meta('user_email'), $size = '30'); ?> 
 				<?php
 					echo '<span class="label">' . esc_attr( __( 'By ', 'storefront' ) );
 					the_author_posts_link();
 					echo '</span>'
 				?>
-			</div>
+			</p></div>
 			<?php
 			/* translators: used between list items, there is a space after the comma */
 			$categories_list = get_the_category_list( __( ', ', 'storefront' ) );

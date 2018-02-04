@@ -403,7 +403,7 @@ span.sticky-tag{
 
      .latest-posts-thumbnail {
      	object-fit:cover;
-		height:230px;
+		height:350px;
      	width: 100%;
      	margin-bottom: 30px;
      	 border-radius: 0;
@@ -669,6 +669,11 @@ div.collection-links {
    margin-bottom: 1.618em;
 }
 
+ .archive #main .entry-meta {
+    
+    width:100%;
+    
+}
 /* Styling SideBar */
 
 #secondary.widget-area .widget {

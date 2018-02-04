@@ -46,7 +46,7 @@ if ( has_post_thumbnail() ) : ?>
 <?php endif;  ?></div><div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
     <h2><a href="<?php the_permalink(); ?>" title="Read more"><?php the_title(); ?></a></h2>
     <?php the_excerpt(); 
-    ?> <p class="tiny-face"><? echo get_avatar( get_the_author_meta('user_email'), $size = '30'); ?> by <?php the_author();?></p>
+     oaxaca_home_meta(); ?>
 </div></div>
 </div><!-- #post-## -->
 
