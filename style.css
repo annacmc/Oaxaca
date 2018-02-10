@@ -11,6 +11,44 @@ Updated: 2018-01-12 01:45:05
 
 */
 
+/* Styling Header Menu Nav */
+
+#masthead #menu-primary-1 .current-menu-item  {
+    background-color: #8ACCB8;
+}
+
+#masthead #menu-primary-1 .menu-item:hover {
+    background-color: #8ACCB8;
+}
+
+#masthead .storefront-primary-navigation {
+    background-color:#333333;
+
+}
+#masthead .storefront-primary-navigation a{
+    color:white;
+    text-transform:uppercase;
+}
+
+#masthead .storefront-primary-navigation .sub-menu a{
+    
+    color:black;
+    
+}
+
+
+#masthead .main-navigation a {
+    padding-top:15px;
+    padding-bottom:15px;
+    }
+
+    .site-description {
+    
+    padding-bottom:30px;
+    
+}
+
+
 .archive span.vcard{
     color:black;
     font-size:40px;
