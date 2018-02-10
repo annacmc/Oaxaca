@@ -841,3 +841,41 @@ width: 300px;
  font-size: 20px;
  letter-spacing: 1px;
 }
+
+/* Style topbar */
+
+#topbar {
+    background-color: #1F1F20;
+    height: 40px;
+    line-height: 40px;
+}
+
+#topbar p {
+    color: #fff;
+  }
+
+
+div.menu-topbar-container a, div.menu-topbar-container a:visited, .top-bar-date {
+    font-size: 15px;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: -.5px;
+    font-weight: 200;
+}
+
+#menu-social li a{
+    color: white;
+    font-size: 19px;
+    padding:4px;
+}
+
+div.menu-topbar-container ul, div.menu-topbar-container li {
+    list-style: none;
+    display: inline;
+    margin-left: 10px;
+}
+
+div.menu-topbar-container ul {
+    border-left: solid .5px lightgrey;
+}
+

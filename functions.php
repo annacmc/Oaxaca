@@ -17,7 +17,15 @@ wp_enqueue_style('font-awesome-css', get_stylesheet_directory_uri().'/font-aweso
 }
 add_action( 'wp_enqueue_scripts', 'oaxaca_enqueue_styles' );
 
-   
+add_theme_support( 'jetpack-social-menu' );
+
+   /* Register Top bar and Social Menus for topbar */
+
+function register_topbar_menu() {
+  register_nav_menu('top-bar-menu',__( 'Topbar Menu' ));
+}
+add_action( 'init', 'register_topbar_menu' );
+
 
 
 /**
@@ -63,6 +71,7 @@ function oaxaca_widgets_init() {
 
 }
 add_action( 'widgets_init', 'oaxaca_widgets_init' );
+
 
 /**
  * Prints the Breadcrumb in Storefront using the function by Yoast SEO.
@@ -350,7 +359,7 @@ if ( ! function_exists( 'storefront_primary_navigation' ) ) {
 	 */
 	function storefront_primary_navigation() {
 		?>
-		<nav id="site-navigation" class="main-navigation sticky-top" role="navigation" aria-label="<?php esc_html_e( 'Primary Navigation', 'storefront' ); ?>">
+		<nav id="site-navigation" class="main-navigation" role="navigation" aria-label="<?php esc_html_e( 'Primary Navigation', 'storefront' ); ?>">
 		<button class="menu-toggle" aria-controls="site-navigation" aria-expanded="false"><span><?php echo esc_attr( apply_filters( 'storefront_menu_toggle_text', __( 'Menu', 'storefront' ) ) ); ?></span></button>
 			<?php
 			wp_nav_menu(
@@ -371,3 +380,32 @@ if ( ! function_exists( 'storefront_primary_navigation' ) ) {
 		<?php
 	}
 }
+
+/**
+ * Adds a top bar to Storefront, before the header.
+ */
+function storefront_add_topbar() {
+    ?>
+    <div id="topbar">
+    	<div class="col-full container">
+    		<div class="row">
+
+    			<div class="col-6 text-left">
+
+    				<div class="row">
+
+    				<span class="top-bar-date"><?echo date("l \, jS \of F Y");
+    				?> </span>
+
+    				<span class="top-bar-menu"><?wp_nav_menu( array( 'theme_location' => 'top-bar-menu' ) );?></span>
+    			</div>
+    			</div>
+    			<div class="col-6 text-right"><?php if ( function_exists( 'jetpack_social_menu' ) ) jetpack_social_menu(); ?>
+</div>
+    		</div>
+
+    	</div>
+    </div>
+    <?php
+}
+add_action( 'storefront_before_header', 'storefront_add_topbar' );
