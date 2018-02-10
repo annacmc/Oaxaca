@@ -394,11 +394,11 @@ span.sticky-tag{
             
         }
      
-     .sticky-thumbnail {
-     	object-fit:cover;
-     	max-height: 200px;
 
-     }
+     #sticky-posts .sticky-thumbnail {
+    
+    height:200px;
+          object-fit:cover; }
 
     /*
      * Responsive CSS rules.
@@ -823,4 +823,12 @@ width: 300px;
     filter: grayscale(100%);
   
     
+}
+
+/* Style full width footer (insta) */
+
+.full-width-footer-widget h2{
+ text-transform:uppercase;
+ font-size: 20px;
+ letter-spacing: 1px;
 }
