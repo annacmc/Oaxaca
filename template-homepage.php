@@ -129,11 +129,11 @@ oaxaca_home_meta();
            while ($wp_query->have_posts()) : $wp_query->the_post(); 
              ?><div class="row"><div class="col-xs-12 col-sm-12 col-md-5 col-lg-5"><?
              if ( has_post_thumbnail() ) : ?>
+            
              <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
                <img class="latest-posts-thumbnail" src="<?php the_post_thumbnail_url(); ?>"/>
            </a>
-       <?php endif;  ?></div><div class="col-xs-12 col-sm-12 col-md-7 col-lg-7 content-area">
-          <h2><a href="<?php the_permalink(); ?>" title="Read more"><?php the_title(); ?></a></h2>
+       <?php endif;  ?></div><div class="col-xs-12 col-sm-12 col-md-7 col-lg-7 content-area"> <?php the_tags( '<span class="tags"> ', ' </span><span class="tags"> ', ' </span> ' ); ?><h2><a href="<?php the_permalink(); ?>" title="Read more"><?php the_title(); ?></a></h2>
           <?php 
 $excerpt = get_the_excerpt();
 echo $excerpt;
@@ -195,7 +195,7 @@ oaxaca_home_meta();
                <img class="latest-posts-thumbnail" src="<?php the_post_thumbnail_url(); ?>"/>
            </a>
        <?php endif;  ?></div><div class="col-xs-12 col-sm-12 col-md-7 col-lg-7 content-area">
-          <h2><a href="<?php the_permalink(); ?>" title="Read more"><?php the_title(); ?></a></h2>
+          <?php the_tags( '<span class="tags"> ', ' </span><span class="tags"> ', ' </span> ' ); ?><h2><a href="<?php the_permalink(); ?>" title="Read more"><?php the_title(); ?></a></h2>
           <?php 
 $excerpt = get_the_excerpt();
 echo $excerpt;

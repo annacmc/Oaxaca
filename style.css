@@ -36,13 +36,28 @@ Updated: 2018-01-12 01:45:05
     
 }
 
+/* Styling tags on post display */
+.latest-posts-listing .tags {
+ background-color:#8ACCB8;
+ margin:2px;
+ padding:2px 5px;
+ text-transform: uppercase;
+ letter-spacing: -1px;
+ font-size: 11px;
+ 
+}
+
+.latest-posts-listing .tags a{
+     color:white;
+}
+
 
 #masthead .main-navigation a {
     padding-top:15px;
     padding-bottom:15px;
     }
 
-    .site-description {
+    .site-branding {
     
     padding-bottom:30px;
     
