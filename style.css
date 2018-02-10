@@ -13,11 +13,11 @@ Updated: 2018-01-12 01:45:05
 
 /* Styling Header Menu Nav */
 
-#masthead #menu-primary-1 .current-menu-item  {
+#masthead .primary-navigation .current-menu-item  {
     background-color: #8ACCB8;
 }
 
-#masthead #menu-primary-1 .menu-item:hover {
+#masthead .primary-navigation .menu-item:hover {
     background-color: #8ACCB8;
 }
 
