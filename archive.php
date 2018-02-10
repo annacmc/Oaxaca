@@ -63,9 +63,9 @@ if( $counter == 1 ) {  ?>
   <img class="latest-posts-thumbnail" src="<?php the_post_thumbnail_url(); ?>"/>
   </a>
 <?php endif;  ?><div class="pop-text"><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?>
-  </a></div><span> <?php the_excerpt();
-    oaxaca_home_meta();
-    the_tags( '<span class="display-tags"> ', ' </span><span class="display-tags"> ', ' </span> ' );   ?></span></div></div>
+  </a></div><span class="excerpt-author"> <?php the_excerpt(); echo 'Written by ';the_author_posts_link(); ?></span><span> <p><?
+  oaxaca_archive_meta();
+    the_tags( '<span class="display-tags"> ', ' </span><span class="display-tags"> ', ' </span> ' );   ?></p></span></div></div>
 
 
 <? } elseif( $counter == 2 ) {  ?>
@@ -78,7 +78,8 @@ if( $counter == 1 ) {  ?>
   <img class="latest-posts-thumbnail" src="<?php the_post_thumbnail_url(); ?>"/>
   </a>
 <?php endif;  ?><div class="pop-text"><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?>
-  </a></div><span> <?php the_excerpt();  oaxaca_home_meta(); the_tags( '<span class="display-tags"> ', ' </span><span class="display-tags"> ', ' </span> ' ); ?></span></div></div>
+  </a></div><span class="excerpt-author"><?php the_excerpt(); echo 'Written by ';the_author_posts_link(); ?></span><span> <p><?
+  oaxaca_archive_meta(); the_tags( '<span class="display-tags"> ', ' </span><span class="display-tags"> ', ' </span> ' ); ?></span></div></div>
 
 <div class="popular-tags"><strong>Popular Tags </strong><i class="fa fa-tag"> </i> <?php wp_tag_cloud( 'smallest=11&largest=11&number=9&orderby=count&separator=, ' ); ?></div>
 

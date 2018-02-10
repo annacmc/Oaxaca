@@ -51,6 +51,15 @@ Updated: 2018-01-12 01:45:05
      color:white;
 }
 
+/* tags display for first two poats on archive pages */
+
+.popular-posts-archive .display-tags {
+    background-color:#bbdfea;
+}
+
+/* Styling exerpt on featured post archive */
+
+.excerpt-author p{display:inline;}
 
 #masthead .main-navigation a {
     padding-top:15px;

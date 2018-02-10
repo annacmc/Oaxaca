@@ -295,6 +295,52 @@ if ( ! function_exists( 'oaxaca_home_meta' ) ) {
 	}
 }
 
+/** Set up meta info on home page post styling */
+if ( ! function_exists( 'oaxaca_archive_meta' ) ) {
+	/**
+	 * Display the post meta
+	 *
+	 * @since 1.0.0
+	 */
+	function oaxaca_archive_meta() {
+		?>
+		<aside class="entry-meta">
+			<?php if ( 'post' == get_post_type() ) : // Hide category and tag text for pages on Search.
+
+			/* translators: used between list items, there is a space after the comma */
+			$categories_list = get_the_category_list( __( ', ', 'storefront' ) );
+
+			if ( $categories_list ) : ?>
+				<div class="cat-links">
+					<?php
+					echo '<span class="label"><i class="fa fa-folder"> </i> ' . esc_attr( __( ' ', 'storefront' ) );
+					echo wp_kses_post( $categories_list );
+					echo '</span>'					?>
+				</div>
+			<?php endif; // End if categories. ?>
+			<?php
+			/* translators: used between list items, there is a space after the comma */
+			$collection_list = get_the_term_list($post->ID, 'collection', '',  ', ');
+
+
+			if ( $collection_list ) : ?>
+				<div class="collection-links">
+					<?php
+					echo '<span class="label"><i class="fa fa-book"> </i> </i> ' . esc_attr( __( ' ', 'storefront' ) );
+					echo wp_kses_post( $collection_list );
+					echo '</span>'					?>
+				</div>
+			<?php endif; // End if collections. ?>
+
+		<?php endif; // End if 'post' == get_post_type(). ?>
+
+
+		</aside>
+		<?php
+	}
+}
+
+
 if ( ! function_exists( 'storefront_primary_navigation' ) ) {
 	/**
 	 * Display Primary Navigation

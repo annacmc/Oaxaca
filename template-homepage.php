@@ -91,10 +91,12 @@ oaxaca_home_meta();
                    </a>
                <?php endif;  ?>
                <span class="sticky-tag"><?php
-               $terms = get_the_terms( $post->ID , 'collection' );
-               $first_term = reset($terms);
-               echo $first_term->name;
-               ?></span><p>
+               $terms = get_the_terms ( $post->ID , 'collection' );
+               $term = array_pop($terms);
+      
+            echo '<a href="'.get_term_link($term->slug, 'collection').'">'.$term->name.'</a>';?>
+                 
+               </span><p>
                    <span><a class="sticky-title" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
                        <?php the_title(); ?>
                    </a> </span></p>
