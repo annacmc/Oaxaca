@@ -37,7 +37,7 @@ Updated: 2018-01-12 01:45:05
 }
 
 /* Styling tags on post display */
-.latest-posts-listing .tags {
+ .display-tags {
  background-color:#8ACCB8;
  margin:2px;
  padding:2px 5px;
@@ -47,7 +47,7 @@ Updated: 2018-01-12 01:45:05
  
 }
 
-.latest-posts-listing .tags a{
+.display-tags a{
      color:white;
 }
 
@@ -697,12 +697,20 @@ text-align: center;
 }
 
 
-/* Style homepage meta info */
+/* Style meta info */
 .home .cat-links,.home .collection-links {
     display:inline;
 }
 
 .home .collection-links {
+  padding-left:10px;
+}
+
+.archive .cat-links, .archive .collection-links {
+    display:inline;
+}
+
+.archive .collection-links {
   padding-left:10px;
 }
 
@@ -784,6 +792,7 @@ width: 300px;
 .tiny-face .avatar {
    
     width:30px;
+    height: 30px;
     border-radius:50%;
     display:inline;
     margin:8px;

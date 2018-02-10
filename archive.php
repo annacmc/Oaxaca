@@ -11,8 +11,12 @@ get_header(); ?>
 
 
 
-    <?php if ( have_posts() ) : 
+    <?php if ( have_posts() ) : ?>
 
+    
+
+
+<?php    
 
   $backgroundImg = get_header_image();
      
@@ -59,7 +63,9 @@ if( $counter == 1 ) {  ?>
   <img class="latest-posts-thumbnail" src="<?php the_post_thumbnail_url(); ?>"/>
   </a>
 <?php endif;  ?><div class="pop-text"><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?>
-  </a></div><span> <?php the_excerpt(); ?></span></div></div>
+  </a></div><span> <?php the_excerpt();
+    oaxaca_home_meta();
+    the_tags( '<span class="display-tags"> ', ' </span><span class="display-tags"> ', ' </span> ' );   ?></span></div></div>
 
 
 <? } elseif( $counter == 2 ) {  ?>
@@ -72,7 +78,7 @@ if( $counter == 1 ) {  ?>
   <img class="latest-posts-thumbnail" src="<?php the_post_thumbnail_url(); ?>"/>
   </a>
 <?php endif;  ?><div class="pop-text"><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?>
-  </a></div><span> <?php the_excerpt(); ?></span></div></div>
+  </a></div><span> <?php the_excerpt();  oaxaca_home_meta(); the_tags( '<span class="display-tags"> ', ' </span><span class="display-tags"> ', ' </span> ' ); ?></span></div></div>
 
 <div class="popular-tags"><strong>Popular Tags </strong><i class="fa fa-tag"> </i> <?php wp_tag_cloud( 'smallest=11&largest=11&number=9&orderby=count&separator=, ' ); ?></div>
 
@@ -89,8 +95,11 @@ if ( has_post_thumbnail() ) : ?>
   <img class="latest-posts-thumbnail" src="<?php the_post_thumbnail_url(); ?>"/>
   </a>
 <?php endif;  ?></div><div class="col-xs-12 col-sm-12 col-md-7 col-lg-7">
-    <h2><a href="<?php the_permalink(); ?>" title="Read more"><?php the_title(); ?></a></h2>
-    <?php the_excerpt(); ?>
+    <?php the_tags( '<span class="display-tags"> ', ' </span><span class="display-tags"> ', ' </span> ' ); ?>  <h2><a href="<?php the_permalink(); ?>" title="Read more"><?php the_title(); ?></a></h2>
+
+    <?php the_excerpt(); 
+    oaxaca_home_meta();?>
+
 </div></div>
 </div><!-- #post-## -->
 

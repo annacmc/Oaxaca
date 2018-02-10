@@ -43,7 +43,7 @@ if ( has_post_thumbnail() ) : ?>
   <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
   <img class="latest-posts-thumbnail" src="<?php the_post_thumbnail_url(); ?>"/>
   </a>
-<?php endif;  ?></div><div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+<?php endif;  ?></div><div class="col-xs-12 col-sm-12 col-md-6 col-lg-6"> <?php the_tags( '<span class="display-tags"> ', ' </span><span class="display-tags"> ', ' </span> ' ); ?>  
     <h2><a href="<?php the_permalink(); ?>" title="Read more"><?php the_title(); ?></a></h2>
     <?php the_excerpt(); 
      oaxaca_home_meta(); ?>
