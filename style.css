@@ -14,11 +14,11 @@ Updated: 2018-01-12 01:45:05
 /* Styling Header Menu Nav */
 
 #masthead .primary-navigation .current-menu-item  {
-    background-color: #8ACCB8;
+        background-color: #4C9C93;
 }
 
 #masthead .primary-navigation .menu-item:hover {
-    background-color: #8ACCB8;
+        background-color: #4C9C93;
 }
 
 #masthead .storefront-primary-navigation {
@@ -38,7 +38,7 @@ Updated: 2018-01-12 01:45:05
 
 /* Styling tags on post display */
  .display-tags {
- background-color:#8ACCB8;
+ background-color:#4C9C93;
  margin:2px;
  padding:2px 5px;
  text-transform: uppercase;
@@ -845,7 +845,7 @@ width: 300px;
 /* Style topbar */
 
 #topbar {
-    background-color: #1F1F20;
+    background-color:#1F4F4A;
     height: 40px;
     line-height: 40px;
 }
@@ -854,6 +854,9 @@ width: 300px;
     color: #fff;
   }
 
+#topbar ul{
+    margin-left:0px;
+}
 
 
 #menu-top-menu .menu-item a, .top-bar-date {
