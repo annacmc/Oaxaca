@@ -855,7 +855,8 @@ width: 300px;
   }
 
 
-div.menu-topbar-container a, div.menu-topbar-container a:visited, .top-bar-date {
+
+#menu-top-menu .menu-item a, .top-bar-date {
     font-size: 15px;
     color: #ffffff;
     text-transform: uppercase;
@@ -869,13 +870,14 @@ div.menu-topbar-container a, div.menu-topbar-container a:visited, .top-bar-date 
     padding:4px;
 }
 
-div.menu-topbar-container ul, div.menu-topbar-container li {
+#menu-top-menu .menu-item, #menu-top-menu .menu-item li {
     list-style: none;
     display: inline;
     margin-left: 10px;
 }
 
-div.menu-topbar-container ul {
+#menu-top-menu .menu-item {
     border-left: solid .5px lightgrey;
+    padding-left:10px
+    
 }
-
